@@ -5,6 +5,8 @@ description: Engineering notes, release updates, and insights from the Radius Re
 
 # Radius Red Blog
 
+![Radius Red Banner](/blog/assets/images/banner-whitetext.webp)
+
 Engineering notes, release updates, and insights from the Radius Red team.
 
 ## Latest Posts
@@ -27,3 +29,4 @@ This blog is part of our open-source practice.
 
 Licensed under the Apache License, Version 2.0.
 Copyright 2026 [Radius Red Ltd.](https://github.com/radiusred) | [Contact](mailto:opensource@radiusred.uk)
+
