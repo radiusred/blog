@@ -9,7 +9,7 @@ Engineering notes, release updates, and insights from the Radius Red team.
 
 ## Latest Posts
 
-- **[Hello from Radius Red](/blog/posts/hello-radius-red/)** - April 6, 2026
+- **[Hello from Radius Red](/posts/hello-radius-red/)** - April 6, 2026
 
 ## About This Blog
 
