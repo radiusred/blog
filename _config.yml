@@ -1,0 +1,13 @@
+title: Radius Red Blog
+description: Engineering notes, release updates, and insights from the Radius Red team.
+url: https://radiusred.github.io/blog
+baseurl: /blog
+
+collections:
+  posts:
+    output: true
+    permalinks: /posts/:title/
+
+markdown: kramdown
+timezone: Europe/London
+future: true
