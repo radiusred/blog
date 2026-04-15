@@ -54,6 +54,11 @@ p {
   margin: 1rem 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .back-link {
   display: inline-block;
   margin-top: 2rem;
@@ -66,4 +71,3 @@ p {
   background: #e0e0e0;
   text-decoration: none;
 }
-
