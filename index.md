@@ -11,6 +11,7 @@ Engineering notes, release updates, and insights from the Radius Red team.
 
 ## Latest Posts
 
+- **[When Research Says Go but Implementation Says Wait](/blog/posts/2026-04-16-when-research-says-go-but-implementation-says-wait.html)** - April 16, 2026
 - **[Hello from Radius Red](/blog/hello-radius-red.html)** - April 6, 2026
 
 ## About This Blog
@@ -29,4 +30,3 @@ This blog is part of our open-source practice.
 
 Licensed under the Apache License, Version 2.0.
 Copyright 2026 [Radius Red Ltd.](https://github.com/radiusred) | [Contact](mailto:opensource@radiusred.uk)
-
