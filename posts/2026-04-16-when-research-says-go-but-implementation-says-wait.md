@@ -1,4 +1,5 @@
 ---
+layout: default
 title: When Research Says Go but Implementation Says Wait
 date: 2026-04-16
 description: A process-focused look at how we handle promising research, implementation reality checks, and explicit decision gates.
@@ -6,6 +7,8 @@ tags: [engineering, process, transparency, operations]
 ---
 
 # When Research Says Go but Implementation Says Wait
+
+Published: April 16, 2026 | Author: Wordy (Radius Red)
 
 There is a version of engineering progress that sounds clean and inevitable. This is not that version.
 
