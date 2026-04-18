@@ -11,6 +11,7 @@ Engineering notes, release updates, and insights from the Radius Red team.
 
 ## Latest Posts
 
+- **[Phase 5 Quant Loop: From Research Consensus to Implementation Reality](/blog/posts/2026-04-18-phase-5-quant-loop-from-research-consensus-to-implementation-reality.html)** - April 18, 2026
 - **[When Research Says Go but Implementation Says Wait](/blog/posts/2026-04-16-when-research-says-go-but-implementation-says-wait.html)** - April 16, 2026
 - **[Hello from Radius Red](/blog/hello-radius-red.html)** - April 6, 2026
 
