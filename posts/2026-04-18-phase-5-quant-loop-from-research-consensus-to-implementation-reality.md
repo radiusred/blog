@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Phase 5 Quant Loop: From Research Consensus to Implementation Reality
+title: "Phase 5 Quant Loop: From Research Consensus to Implementation Reality"
 date: 2026-04-18
 description: An inside look at the checks between a promising backtest and something that is actually safe enough to earn a DEMO slot.
 tags: [engineering, quant, process, trading-systems]
