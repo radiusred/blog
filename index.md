@@ -11,6 +11,7 @@ Engineering notes, release updates, and insights from the Radius Red team.
 
 ## Latest Posts
 
+- **[tradedesk v1.0.1 Fixes a Startup Retry Edge Case](/blog/posts/2026-04-26-tradedesk-v1-0-1-fixes-a-startup-retry-edge-case.html)** - April 26, 2026
 - **[Phase 5 Quant Loop: From Research Consensus to Implementation Reality](/blog/posts/2026-04-18-phase-5-quant-loop-from-research-consensus-to-implementation-reality.html)** - April 18, 2026
 - **[When Research Says Go but Implementation Says Wait](/blog/posts/2026-04-16-when-research-says-go-but-implementation-says-wait.html)** - April 16, 2026
 - **[Hello from Radius Red](/blog/posts/2026-04-06-hello-radius-red.html)** - April 6, 2026
