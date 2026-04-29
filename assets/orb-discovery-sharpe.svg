@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" font-family="system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="600" height="360" fill="#fafafa" rx="6"/>
+
+  <!-- Title -->
+  <text x="300" y="32" text-anchor="middle" font-size="14" font-weight="600" fill="#1a1a1a">Opening Range Breakout — Best Discovery Sharpe by Instrument</text>
+
+  <!-- Subtitle -->
+  <text x="300" y="52" text-anchor="middle" font-size="11" fill="#666">216 configurations · discovery 2020–2021 · target Sharpe ≥ 1.5</text>
+
+  <!-- Chart area: x=60–540, y=70–290, height=220 -->
+  <!-- Y axis: -1.0 to 1.6 (range = 2.6) -->
+  <!-- y_zero at value=0: y = 70 + 220*(1.6/2.6) = 70 + 135.4 = 205 -->
+  <!-- scale: 220/2.6 = 84.6 px per unit -->
+
+  <!-- Axes -->
+  <line x1="60" y1="70" x2="60" y2="290" stroke="#ccc" stroke-width="1"/>
+  <line x1="60" y1="290" x2="540" y2="290" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Gridlines -->
+  <line x1="60" y1="121" x2="540" y2="121" stroke="#eee" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="163" x2="540" y2="163" stroke="#eee" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="205" x2="540" y2="205" stroke="#bbb" stroke-width="1"/>
+  <line x1="60" y1="248" x2="540" y2="248" stroke="#eee" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Deployment target line at 1.5 -->
+  <!-- y at value=1.5: 70 + 220*(0.1/2.6) = 79 -->
+  <line x1="60" y1="79" x2="540" y2="79" stroke="#2ecc71" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="545" y="83" font-size="10" fill="#2ecc71">1.5 target</text>
+
+  <!-- Y axis labels -->
+  <text x="52" y="83" text-anchor="end" font-size="10" fill="#666">1.5</text>
+  <text x="52" y="125" text-anchor="end" font-size="10" fill="#666">1.0</text>
+  <text x="52" y="167" text-anchor="end" font-size="10" fill="#666">0.5</text>
+  <text x="52" y="209" text-anchor="end" font-size="10" fill="#666">0.0</text>
+  <text x="52" y="252" text-anchor="end" font-size="10" fill="#666">−0.5</text>
+  <text x="52" y="294" text-anchor="end" font-size="10" fill="#666">−1.0</text>
+  <text x="20" y="185" text-anchor="middle" font-size="11" fill="#444" transform="rotate(-90 20 185)">Sharpe ratio</text>
+
+  <!-- Bars — 2 instruments, bar width=160 -->
+  <!-- DAX centered at x=180, USA500 centered at x=420 -->
+
+  <!-- DAX: Sharpe 0.20 → bar from y=205 up, height = 0.20*84.6 ≈ 17 -->
+  <!-- bar top: y = 205 - 17 = 188 -->
+  <rect x="100" y="188" width="160" height="17" fill="#e74c3c" opacity="0.85" rx="2"/>
+  <text x="180" y="182" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="600">0.20</text>
+  <text x="180" y="310" text-anchor="middle" font-size="11" fill="#333">DAX</text>
+  <text x="180" y="323" text-anchor="middle" font-size="10" fill="#777">108 configs · 1 positive</text>
+
+  <!-- USA500: Sharpe 0.83 → bar from y=205 up, height = 0.83*84.6 ≈ 70 -->
+  <!-- bar top: y = 205 - 70 = 135 -->
+  <rect x="340" y="135" width="160" height="70" fill="#e74c3c" opacity="0.85" rx="2"/>
+  <text x="420" y="129" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="600">0.83</text>
+  <text x="420" y="310" text-anchor="middle" font-size="11" fill="#333">USA500</text>
+  <text x="420" y="323" text-anchor="middle" font-size="10" fill="#777">108 configs · 36 positive</text>
+
+  <!-- Zero line label -->
+  <text x="56" y="209" text-anchor="end" font-size="9" fill="#888">zero</text>
+
+  <!-- Caption -->
+  <text x="300" y="347" text-anchor="middle" font-size="10" fill="#888">USA500 best Sharpe drops from 0.83 to 0.22 when discovery window extended to 2020–2022</text>
+</svg>

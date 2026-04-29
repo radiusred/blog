@@ -1,11 +1,15 @@
-# Radius Red Blog (Legacy Repository)
+# Radius Red Blog
 
-This repository is no longer the canonical publishing source for Radius Red GitHub Pages.
+This repository is the canonical source for the Radius Red public blog.
 
-Canonical source of truth:
+Publishing endpoints:
 
-- Repository: `radiusred/.github`
-- Live site: `https://radiusred.github.io/.github/`
-- Live blog: `https://radiusred.github.io/.github/blog/`
+- Blog: `https://radiusred.github.io/blog/`
+- Feed: `https://radiusred.github.io/blog/atom.xml`
 
-Use `radiusred/.github` for new or updated public blog posts and site documentation. Keep this repository for historical context and archival content unless policy changes.
+Repository roles:
+
+- `radiusred/blog`: blog posts, blog assets, and Jekyll blog configuration
+- `radiusred/.github`: org profile/docs site and routing that can link/redirect to the blog
+
+When adding or updating blog articles, do it in this repository.
