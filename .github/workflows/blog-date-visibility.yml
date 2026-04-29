@@ -33,15 +33,15 @@ jobs:
 
       - name: Assert future-dated fixture is not rendered on public surfaces
         run: |
-          if rg -n "Future Visibility Guard" _site/index.html _site/atom.xml; then
+          if grep -n "Future Visibility Guard" _site/index.html _site/atom.xml; then
             echo "Future-dated post leaked into public output."
             exit 1
           fi
-          if ! rg -n "/posts/" _site/index.html; then
+          if ! grep -n "/posts/" _site/index.html; then
             echo "Homepage post list is empty."
             exit 1
           fi
-          if ! rg -n "<entry>" _site/atom.xml; then
+          if ! grep -n "<entry>" _site/atom.xml; then
             echo "Atom feed has no entries."
             exit 1
           fi
