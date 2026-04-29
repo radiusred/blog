@@ -37,7 +37,7 @@ jobs:
             echo "Future-dated post leaked into public output."
             exit 1
           fi
-          if ! grep -n "<li><strong><a href=" _site/index.html; then
+          if ! grep -n "Hello from Radius Red" _site/index.html; then
             echo "Homepage post list is empty."
             exit 1
           fi
