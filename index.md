@@ -11,8 +11,7 @@ Engineering notes, release updates, and insights from the Radius Red team.
 
 ## Latest Posts
 
-{% assign posts_collection = site.collections | where: "label", "posts" | first %}
-{% assign visible_posts = posts_collection.docs | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse %}
+{% assign visible_posts = site.pages | where: "dir", "/posts/" | where_exp: "post", "post.date <= site.time" | sort: "date" | reverse %}
 {% for post in visible_posts %}
 - **[{{ post.title }}]({{ site.baseurl }}{{ post.url }})** - {{ post.date | date: "%B %-d, %Y" }}
 {% endfor %}
