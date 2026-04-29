@@ -12,10 +12,10 @@ Engineering notes, release updates, and insights from the Radius Red team.
 ## Latest Posts
 
 {% assign now_epoch = site.time | date: "%s" %}
-{% assign visible_posts = site.pages | where: "dir", "/posts/" | sort: "date" | reverse %}
+{% assign visible_posts = site.pages | sort: "date" | reverse %}
 {% for post in visible_posts %}
 {% assign post_epoch = post.date | date: "%s" %}
-{% if post_epoch <= now_epoch %}
+{% if post.url contains '/posts/' and post_epoch <= now_epoch %}
 - **[{{ post.title }}]({{ site.baseurl }}{{ post.url }})** - {{ post.date | date: "%B %-d, %Y" }}
 {% endif %}
 {% endfor %}

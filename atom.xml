@@ -3,7 +3,7 @@ layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 {% assign now_epoch = site.time | date: "%s" %}
-{% assign feed_entries = site.pages | where: "dir", "/posts/" | sort: "date" | reverse %}
+{% assign feed_entries = site.pages | sort: "date" | reverse %}
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ site.title | xml_escape }}</title>
   <subtitle>{{ site.description | xml_escape }}</subtitle>
@@ -13,7 +13,7 @@ layout: null
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   {% for page in feed_entries %}
   {% assign page_epoch = page.date | date: "%s" %}
-  {% if page_epoch <= now_epoch %}
+  {% if page.url contains '/posts/' and page_epoch <= now_epoch %}
   <entry>
     <title>{{ page.title | xml_escape }}</title>
     <link href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" rel="alternate" />
