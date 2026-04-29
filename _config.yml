@@ -6,8 +6,9 @@ baseurl: /blog
 collections:
   posts:
     output: true
-    permalinks: /posts/:title/
+    permalink: /posts/:title/
 
 markdown: kramdown
 timezone: Europe/London
 future: false
+show_drafts: false

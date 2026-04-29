@@ -1,0 +1,39 @@
+name: Blog Date Visibility
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  jekyll-future-date-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Create temporary future-dated post fixture
+        run: |
+          cat > posts/2099-01-01-future-visibility-guard.md <<'EOF'
+          ---
+          layout: default
+          title: Future Visibility Guard
+          date: 2099-01-01
+          description: Fixture used by CI to ensure future-dated posts are hidden.
+          ---
+          This is a CI fixture and should never appear in rendered output.
+          EOF
+
+      - name: Build Jekyll site
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Assert future-dated fixture is not rendered on public surfaces
+        run: |
+          if rg -n "Future Visibility Guard" _site/index.html _site/atom.xml; then
+            echo "Future-dated post leaked into public output."
+            exit 1
+          fi
