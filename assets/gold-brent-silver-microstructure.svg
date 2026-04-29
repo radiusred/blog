@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Same archetype, different microstructure</title>
+  <desc id="desc">Qualitative three-panel comparison showing Gold trending steadily upward, Brent drifting lower with sharp jolts, and Silver moving lower with jagged whipsaw behavior.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f1de"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 34px Georgia, "Times New Roman", serif; fill: #1f2937; }
+      .subtitle { font: 500 18px Arial, Helvetica, sans-serif; fill: #475569; }
+      .panel-title { font: 700 26px Arial, Helvetica, sans-serif; fill: #111827; }
+      .panel-note { font: 500 15px Arial, Helvetica, sans-serif; fill: #475569; }
+      .label { font: 700 16px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .card { fill: #ffffff; stroke: #dbe4ea; stroke-width: 2; }
+      .grid { stroke: #e5e7eb; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+
+  <text x="70" y="78" class="title">Same archetype, different microstructure</text>
+  <text x="70" y="110" class="subtitle">Qualitative comparison only. No parameters, axes, or performance figures.</text>
+
+  <rect x="60" y="150" width="340" height="480" rx="24" class="card"/>
+  <rect x="430" y="150" width="340" height="480" rx="24" class="card"/>
+  <rect x="800" y="150" width="340" height="480" rx="24" class="card"/>
+
+  <text x="90" y="200" class="panel-title">Gold</text>
+  <text x="90" y="226" class="panel-note">Sustained intraday trends</text>
+
+  <text x="460" y="200" class="panel-title">Brent Crude</text>
+  <text x="460" y="226" class="panel-note">Chop plus sharp news jolts</text>
+
+  <text x="830" y="200" class="panel-title">Silver</text>
+  <text x="830" y="226" class="panel-note">Whipsaw dominated 15-minute action</text>
+
+  <line x1="90" y1="290" x2="370" y2="290" class="grid"/>
+  <line x1="90" y1="370" x2="370" y2="370" class="grid"/>
+  <line x1="90" y1="450" x2="370" y2="450" class="grid"/>
+  <line x1="90" y1="530" x2="370" y2="530" class="grid"/>
+
+  <line x1="460" y1="290" x2="740" y2="290" class="grid"/>
+  <line x1="460" y1="370" x2="740" y2="370" class="grid"/>
+  <line x1="460" y1="450" x2="740" y2="450" class="grid"/>
+  <line x1="460" y1="530" x2="740" y2="530" class="grid"/>
+
+  <line x1="830" y1="290" x2="1110" y2="290" class="grid"/>
+  <line x1="830" y1="370" x2="1110" y2="370" class="grid"/>
+  <line x1="830" y1="450" x2="1110" y2="450" class="grid"/>
+  <line x1="830" y1="530" x2="1110" y2="530" class="grid"/>
+
+  <path d="M 100 520 C 145 500, 185 490, 220 450 S 295 350, 360 270"
+        fill="none" stroke="#b58900" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="360" cy="270" r="6" fill="#b58900"/>
+  <text x="90" y="585" class="label">Verdict: pass</text>
+
+  <path d="M 470 340
+           C 500 320, 525 330, 550 350
+           S 595 410, 620 390
+           S 670 300, 690 350
+           S 720 470, 730 500"
+        fill="none" stroke="#b45309" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="730" cy="500" r="6" fill="#b45309"/>
+  <text x="460" y="585" class="label">Verdict: archived</text>
+
+  <path d="M 840 360
+           L 875 320
+           L 910 390
+           L 945 345
+           L 980 435
+           L 1015 385
+           L 1050 470
+           L 1085 445
+           L 1100 520"
+        fill="none" stroke="#7f1d1d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1100" cy="520" r="6" fill="#7f1d1d"/>
+  <text x="830" y="585" class="label">Verdict: archived</text>
+</svg>

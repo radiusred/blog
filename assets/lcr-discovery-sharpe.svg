@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" font-family="system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="600" height="360" fill="#fafafa" rx="6"/>
+
+  <!-- Title -->
+  <text x="300" y="32" text-anchor="middle" font-size="14" font-weight="600" fill="#1a1a1a">London Close VWAP Reversal — Best Discovery Sharpe by Instrument</text>
+
+  <!-- Subtitle -->
+  <text x="300" y="52" text-anchor="middle" font-size="11" fill="#666">96 configurations · discovery 2021–2025 · target Sharpe ≥ 1.5</text>
+
+  <!-- Chart area: x=60–540, y=70–290, height=220 -->
+  <!-- Y axis: -1.0 to 1.6 (range = 2.6), zero at 220*1.0/2.6 = 84.6 px from top of chart -->
+  <!-- y_zero = 70 + 220 * (1.0/2.6) = 70 + 84.6 = 154.6 ≈ 155 -->
+  <!-- scale: 220/2.6 = 84.6 px per unit -->
+
+  <!-- Grid lines -->
+  <line x1="60" y1="70" x2="60" y2="290" stroke="#ccc" stroke-width="1"/>
+  <line x1="60" y1="290" x2="540" y2="290" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Horizontal gridlines at 0, 0.5, 1.0, 1.5 and -0.5, -1.0 -->
+  <!-- y = 70 + 220*(1.0 - value)/2.6 ... mapping value=1.6 → y=70, value=-1.0 → y=290 -->
+  <!-- Actually: y_zero at value=0: y = 70 + 220*(1.6/2.6) = 70 + 135.4 = 205.4 ≈ 205 -->
+  <!-- y at value=1.5: 70 + 220*(0.1/2.6) = 70 + 8.5 = 78.5 ≈ 79 -->
+  <!-- y at value=1.0: 70 + 220*(0.6/2.6) = 70 + 50.8 = 120.8 ≈ 121 -->
+  <!-- y at value=0.5: 70 + 220*(1.1/2.6) = 70 + 93.1 = 163.1 ≈ 163 -->
+  <!-- y at value=0.0: 70 + 220*(1.6/2.6) = 70 + 135.4 = 205.4 ≈ 205 -->
+  <!-- y at value=-0.5: 70 + 220*(2.1/2.6) = 70 + 177.7 = 247.7 ≈ 248 -->
+  <!-- y at value=-1.0: 70 + 220*(2.6/2.6) = 70 + 220 = 290 -->
+
+  <!-- Gridlines -->
+  <line x1="60" y1="121" x2="540" y2="121" stroke="#eee" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="163" x2="540" y2="163" stroke="#eee" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="205" x2="540" y2="205" stroke="#bbb" stroke-width="1"/>
+  <line x1="60" y1="248" x2="540" y2="248" stroke="#eee" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Deployment target line at 1.5 -->
+  <line x1="60" y1="79" x2="540" y2="79" stroke="#2ecc71" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="545" y="83" font-size="10" fill="#2ecc71">1.5 target</text>
+
+  <!-- Y axis labels -->
+  <text x="52" y="83" text-anchor="end" font-size="10" fill="#666">1.5</text>
+  <text x="52" y="125" text-anchor="end" font-size="10" fill="#666">1.0</text>
+  <text x="52" y="167" text-anchor="end" font-size="10" fill="#666">0.5</text>
+  <text x="52" y="209" text-anchor="end" font-size="10" fill="#666">0.0</text>
+  <text x="52" y="252" text-anchor="end" font-size="10" fill="#666">−0.5</text>
+  <text x="52" y="294" text-anchor="end" font-size="10" fill="#666">−1.0</text>
+  <text x="20" y="185" text-anchor="middle" font-size="11" fill="#444" transform="rotate(-90 20 185)">Sharpe ratio</text>
+
+  <!-- Bars — 4 instruments, bar width=80, spacing=30 -->
+  <!-- Bars centred at x = 120, 230, 340, 450 -->
+
+  <!-- EURUSD: Sharpe 0.10 → bar from y=205 up to y=205-0.10*84.6 = 205-8.5 = 196.5 -->
+  <!-- bar height = 0.10 * 84.6 = 8.5 -->
+  <rect x="80" y="196" width="80" height="9" fill="#e74c3c" opacity="0.85" rx="2"/>
+  <text x="120" y="190" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="600">0.10</text>
+  <text x="120" y="310" text-anchor="middle" font-size="11" fill="#333">EURUSD</text>
+  <text x="120" y="323" text-anchor="middle" font-size="10" fill="#777">1,170 trades</text>
+
+  <!-- GBPUSD: Sharpe 0.02 → bar height = 0.02 * 84.6 = 1.7 ≈ 2 -->
+  <rect x="190" y="203" width="80" height="2" fill="#e74c3c" opacity="0.85" rx="2"/>
+  <text x="230" y="197" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="600">0.02</text>
+  <text x="230" y="310" text-anchor="middle" font-size="11" fill="#333">GBPUSD</text>
+  <text x="230" y="323" text-anchor="middle" font-size="10" fill="#777">735 trades</text>
+
+  <!-- DAX: Sharpe -0.71 → bar from y=205 DOWN to y=205+0.71*84.6=205+60.1=265.1 -->
+  <!-- bar height = 0.71 * 84.6 = 60 -->
+  <rect x="300" y="205" width="80" height="60" fill="#c0392b" opacity="0.85" rx="2"/>
+  <text x="340" y="280" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="600">−0.71</text>
+  <text x="340" y="310" text-anchor="middle" font-size="11" fill="#333">DAX</text>
+  <text x="340" y="323" text-anchor="middle" font-size="10" fill="#777">1,336 trades</text>
+
+  <!-- FTSE: too few trades — show as hatched/grey -->
+  <rect x="410" y="185" width="80" height="20" fill="#bbb" opacity="0.6" rx="2"/>
+  <text x="450" y="178" text-anchor="middle" font-size="10" fill="#888" font-weight="600">n/a</text>
+  <text x="450" y="310" text-anchor="middle" font-size="11" fill="#333">FTSE</text>
+  <text x="450" y="323" text-anchor="middle" font-size="10" fill="#777">≤31 trades</text>
+
+  <!-- FTSE hatch pattern -->
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#999" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect x="410" y="185" width="80" height="20" fill="url(#hatch)" opacity="0.5" rx="2"/>
+
+  <!-- Zero line label -->
+  <text x="56" y="209" text-anchor="end" font-size="9" fill="#888">zero</text>
+
+  <!-- Caption -->
+  <text x="300" y="347" text-anchor="middle" font-size="10" fill="#888">FTSE excluded from Sharpe comparison — insufficient trade count for statistical significance (≤31 over 5 years)</text>
+</svg>
