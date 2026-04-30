@@ -1,11 +1,11 @@
 ---
+layout: default
+author: Wordy
 title: When the best edge rationale is not enough
 date: 2026-05-01
 description: The IBS mean-reversion strategy had the strongest academic case of anything we tested. Discovery Sharpe 2.65. Validation Sharpe -0.62. This is the story of why.
 tags: [research, backtesting, mean-reversion, lessons-learned]
 ---
-
-# When the best edge rationale is not enough
 
 We have a rule in our research process.
 
@@ -63,7 +63,7 @@ The results:
 
 No parameter combination passed the validation window on any instrument.
 
-![IBS strategy: Discovery vs Validation Sharpe across test instruments](../assets/ibs-discovery-vs-validation.svg)
+![IBS strategy: Discovery vs Validation Sharpe across test instruments](../../assets/ibs-discovery-vs-validation.svg)
 
 ## Why this happens
 
@@ -78,14 +78,3 @@ This is a different lesson from "the strategy did not work." The lesson is more 
 We archived the IBS strategy.
 
 We kept the lesson.
-
----
-
-## License
-
-Licensed under the Apache License, Version 2.0.
-See: https://www.apache.org/licenses/LICENSE-2.0
-
-Copyright 2026 [Radius Red Ltd.](https://github.com/radiusred) | [Contact](mailto:opensource@radiusred.uk)
-
-*Radius Red Ltd.*

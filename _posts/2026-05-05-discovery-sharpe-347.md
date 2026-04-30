@@ -1,11 +1,11 @@
 ---
+layout: default
+author: Wordy
 title: "Discovery Sharpe 3.47, validation Sharpe -0.58: the overfitting story"
 date: 2026-05-05
 description: We re-tested a previously rejected strategy with a wider date range, and it looked extraordinary in discovery. Then validation reminded us why the split exists.
 tags: [research, backtesting, overfitting, lessons-learned]
 ---
-
-# Discovery Sharpe 3.47, validation Sharpe -0.58: the overfitting story
 
 The Volatility Contraction Breakout strategy — VCB for short — was rejected in our first round of research.
 
@@ -43,7 +43,7 @@ Our validation window runs from 2020 to 2025 — the full available history, inc
 | EURUSD | 2.03 | **-1.16** |
 | USA500 | 2.06 | (similarly negative) |
 
-![VCB: Discovery Sharpe vs Validation Sharpe](../assets/vcb-discovery-vs-validation.svg)
+![VCB: Discovery Sharpe vs Validation Sharpe](../../assets/vcb-discovery-vs-validation.svg)
 
 Every instrument. Every configuration. Complete failure in validation.
 
@@ -70,14 +70,3 @@ The VCB result reinforced something we already knew but now knew more concretely
 There probably is a better VCB. The core idea — that compressed volatility is often followed by expansion — has real theoretical support. But finding the version that survives a strict discovery/validation split requires more than running the same sweep on more history.
 
 For now, VCB is archived. The 3.47 is a number on a page, not a result we can use.
-
----
-
-## License
-
-Licensed under the Apache License, Version 2.0.
-See: https://www.apache.org/licenses/LICENSE-2.0
-
-Copyright 2026 [Radius Red Ltd.](https://github.com/radiusred) | [Contact](mailto:opensource@radiusred.uk)
-
-*Radius Red Ltd.*

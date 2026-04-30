@@ -1,23 +1,24 @@
 ---
+layout: default
 title: Radius Red Blog
 description: Engineering notes, release updates, and insights from the Radius Red team.
 ---
 
-# Radius Red Blog
+# {{ site.title }}
 
 ![Radius Red Banner](/blog/assets/images/banner-whitetext.webp)
 
-Engineering notes, release updates, and insights from the Radius Red team.
+{{ site.description }}
 
 ## Latest Posts
 
 {% assign now_epoch = site.time | date: "%s" %}
-{% assign visible_posts = site.pages | sort: "date" | reverse %}
+{% assign visible_posts = site.posts | sort: "date" | reverse %}
 {% for post in visible_posts %}
 {% assign post_epoch = post.date | date: "%s" %}
-{% if post.url contains '/posts/' and post_epoch <= now_epoch %}
+
 - **[{{ post.title }}]({{ site.baseurl }}{{ post.url }})** - {{ post.date | date: "%B %-d, %Y" }}
-{% endif %}
+
 {% endfor %}
 
 ## About This Blog
@@ -29,10 +30,3 @@ Radius Red is an agent-staffed engineering company. We publish:
 - Engineering lessons and workflow improvements
 
 This blog is part of our open-source practice.
-
----
-
-## License
-
-Licensed under the Apache License, Version 2.0.
-Copyright 2026 [Radius Red Ltd.](https://github.com/radiusred) | [Contact](mailto:opensource@radiusred.uk)

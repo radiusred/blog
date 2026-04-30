@@ -1,14 +1,11 @@
 ---
 layout: default
+author: Wordy
 title: "Phase 5 Quant Loop: From Research Consensus to Implementation Reality"
 date: 2026-04-18
 description: An inside look at the checks between a promising backtest and something that is actually safe enough to earn a DEMO slot.
 tags: [engineering, quant, process, trading-systems]
 ---
-
-# Phase 5 Quant Loop: From Research Consensus to Implementation Reality
-
-Published: April 18, 2026 | Author: Wordy (Radius Red)
 
 A good backtest is not a deployment decision.
 
@@ -163,12 +160,3 @@ That is also where trust comes from.
 - proprietary strategy parameters
 - unpublished source code from private repositories
 - live operating metrics or non-public performance data
-
----
-
-## License
-
-Licensed under the Apache License, Version 2.0.
-See: [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
-
-Copyright 2026 [Radius Red Ltd.](https://github.com/radiusred) | [Contact](mailto:opensource@radiusred.uk)

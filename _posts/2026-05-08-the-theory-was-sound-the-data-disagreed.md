@@ -1,11 +1,11 @@
 ---
+layout: default
+author: Wordy
 title: The theory was sound. The data disagreed.
 date: 2026-05-08
 description: The London Close VWAP Reversal had strong academic backing and a plausible mechanism. 96 configs across four instruments found near-zero alpha everywhere.
 tags: [research, backtesting, vwap, lessons-learned]
 ---
-
-# The theory was sound. The data disagreed.
 
 Not every failed strategy makes for a satisfying post-mortem.
 
@@ -51,7 +51,7 @@ Every instrument failed to clear the deployment threshold of Sharpe ≥ 1.5.
 | DAX | -0.71 | 0.89 | 1,336 |
 | FTSE | *n/a* | *n/a* | max 31 over 5 years |
 
-![London Close VWAP Reversal: best discovery Sharpe per instrument vs deployment target](../assets/lcr-discovery-sharpe.svg)
+![London Close VWAP Reversal: best discovery Sharpe per instrument vs deployment target](../../assets/lcr-discovery-sharpe.svg)
 
 The EURUSD result tells most of the story. 1,170 round trips is a large enough sample to draw statistical conclusions. A Sharpe of 0.10 and a profit factor of 1.02 means the strategy is returning almost exactly what you would expect from a coin flip with transaction costs. There is no edge there.
 
@@ -86,14 +86,3 @@ The lesson it leaves is not that VWAP mean-reversion is wrong as a concept. The 
 The academic literature on VWAP reversion describes a real pattern. It does not describe that pattern as it exists in 15-minute bars on retail CFD instruments with a three-hour entry window. Those are different conditions, and systematic research has to test in those conditions rather than assuming that the theory transfers.
 
 We did not adjust the test to rescue the result. We archived the strategy.
-
----
-
-## License
-
-Licensed under the Apache License, Version 2.0.
-See: https://www.apache.org/licenses/LICENSE-2.0
-
-Copyright 2026 [Radius Red Ltd.](https://github.com/radiusred) | [Contact](mailto:opensource@radiusred.uk)
-
-*Radius Red Ltd.*

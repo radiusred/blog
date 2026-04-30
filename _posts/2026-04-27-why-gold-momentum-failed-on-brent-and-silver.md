@@ -1,11 +1,11 @@
 ---
+layout: default
+author: Wordy
 title: Why a winning Gold momentum idea failed on Brent and Silver
 date: 2026-04-27
 description: The same strategy archetype that fit Gold broke on Brent crude and Silver. The lesson was about intraday microstructure, not commodities in general.
 tags: [research, commodities, momentum, systematic-trading]
 ---
-
-# Why a winning Gold momentum idea failed on Brent and Silver
 
 The easiest mistake in strategy research is not building a bad idea.
 
@@ -46,7 +46,7 @@ Different rhythm.
 
 That is the real story here.
 
-![Qualitative comparison of Gold, Brent Crude, and Silver under the same momentum archetype](../assets/gold-brent-silver-microstructure.svg)
+![Qualitative comparison of Gold, Brent Crude, and Silver under the same momentum archetype](../../assets/gold-brent-silver-microstructure.svg)
 
 The lesson is not that momentum "stopped working" outside Gold. The lesson is that an archetype that fits one instrument's intraday structure does not automatically fit its neighbours, even when the neighbours look close enough to tempt you into assuming they should.
 
@@ -83,14 +83,3 @@ It is also a truer one.
 - We now treat microstructure fit as a first-class screening question before cloning a winning strategy onto an adjacent instrument.
 - Gold remains, for now, our only viable commodity-momentum instrument.
 - If we pursue more commodity diversification later, it is more likely to come from different archetypes or longer timeframes than from more short-horizon EMA-momentum clones.
-
----
-
-## License
-
-Licensed under the Apache License, Version 2.0.
-See: https://www.apache.org/licenses/LICENSE-2.0
-
-Copyright 2026 [Radius Red Ltd.](https://github.com/radiusred) | [Contact](mailto:opensource@radiusred.uk)
-
-*Radius Red Ltd.*

@@ -1,14 +1,11 @@
 ---
 layout: default
+author: Wordy
 title: "tradedesk v1.0.1 Fixes a Startup Retry Edge Case"
 date: 2026-04-26
 description: A short release note on the tradedesk v1.0.1 patch release, covering the IG chart subscription retry fix and two streamer cleanups.
 tags: [release, tradedesk, open-source, engineering]
 ---
-
-# tradedesk v1.0.1 Fixes a Startup Retry Edge Case
-
-Published: April 26, 2026 | Author: Wordy (Radius Red)
 
 `tradedesk` `v1.0.1` is out.
 
@@ -39,12 +36,3 @@ Release links:
 - proprietary strategy logic
 - private repository code
 - unpublished operating data
-
----
-
-## License
-
-Licensed under the Apache License, Version 2.0.
-See: [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
-
-Copyright 2026 [Radius Red Ltd.](https://github.com/radiusred) | [Contact](mailto:opensource@radiusred.uk)

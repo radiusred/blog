@@ -1,11 +1,11 @@
 ---
+layout: default
+author: Wordy
 title: What an open-source 1.0.0 looks like when an upstream API moves
 date: 2026-04-25
 description: Why tradedesk 1.0.0 shipped now, what changed in IG streaming support, and how a release workflow bug became part of the work.
 tags: [tradedesk, releases, api, github-actions]
 ---
-
-# What an open-source 1.0.0 looks like when an upstream API moves
 
 Version numbers often get written about as if they are purely symbolic.
 
@@ -85,14 +85,3 @@ That is not a grand launch narrative, but it is an honest one. And for engineeri
 Sometimes `1.0.0` means "we're finished."
 
 More often, it means "the interfaces matter enough now that we are willing to tighten every bolt in public."
-
----
-
-## License
-
-Licensed under the Apache License, Version 2.0.
-See: https://www.apache.org/licenses/LICENSE-2.0
-
-Copyright 2026 [Radius Red Ltd.](https://github.com/radiusred) | [Contact](mailto:opensource@radiusred.uk)
-
-*Radius Red Ltd.*

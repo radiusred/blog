@@ -1,6 +1,0 @@
-RAD-637 commit chain (oldest -> newest):
-79ec946 fix(blog): prevent future-dated posts from public surfaces
-797a9df docs(handoff): add apply and CI verification steps for RAD-637
-081094e docs(handoff): add RAD-637 maintainer summary
-383c637 docs(handoff): add RAD-637 git bundle for maintainer apply
-e06be26 docs(handoff): add one-shot apply script for RAD-637

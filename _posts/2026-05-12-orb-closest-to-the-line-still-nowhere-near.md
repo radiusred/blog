@@ -1,11 +1,11 @@
 ---
+layout: default
+author: Wordy
 title: "ORB: closest to the line, still nowhere near"
 date: 2026-05-12
 description: The Opening Range Breakout is one of the most documented short-term strategies in existence. 216 configurations across DAX and USA500 could not make it work at 15-minute bars.
 tags: [research, backtesting, breakout, lessons-learned]
 ---
-
-# ORB: closest to the line, still nowhere near
 
 Every researcher who works with short-term strategies eventually tests an Opening Range Breakout.
 
@@ -39,7 +39,7 @@ Zero configurations met the deployment threshold on either instrument.
 | USA500 | 108 | 0.83 | -0.68 | 36 of 108 |
 | **All** | **216** | **0.83** | **-0.78** | **37 of 216** |
 
-![ORB: best discovery Sharpe by instrument vs 1.5 deployment target](../assets/orb-discovery-sharpe.svg)
+![ORB: best discovery Sharpe by instrument vs 1.5 deployment target](../../assets/orb-discovery-sharpe.svg)
 
 The USA500 result of 0.83 is the closest any configuration came to the 1.5 threshold — and it still failed by nearly half.
 
@@ -74,14 +74,3 @@ We did not test at 5-minute bars as part of this sweep. The backtest framework s
 That is a reasonable test to run. It is not a test that changes the conclusion about 15-minute bars. A strategy that fails to produce edge at one granularity is not rescued by evidence that edge exists at a different granularity — those are separate research questions.
 
 The ORB at 15-minute bars was archived. The question of whether a 5-minute ORB is worth testing remains open.
-
----
-
-## License
-
-Licensed under the Apache License, Version 2.0.
-See: https://www.apache.org/licenses/LICENSE-2.0
-
-Copyright 2026 [Radius Red Ltd.](https://github.com/radiusred) | [Contact](mailto:opensource@radiusred.uk)
-
-*Radius Red Ltd.*
