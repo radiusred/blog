@@ -20,6 +20,8 @@ Every post requires valid front matter at the top of the file:
 
 ```yaml
 ---
+layout: default
+author: Your Name
 title: Post title goes here
 date: YYYY-MM-DD
 description: One-sentence summary, used in feed and listings
@@ -27,6 +29,8 @@ tags: [tag1, tag2, tag3]
 ---
 ```
 
+- `layout`: Required. Set to `default` for all posts.
+- `author`: Required. Author name displayed in the post byline.
 - `title`: Required. Displayed as the post heading and in listings.
 - `date`: Required. Sets publication order and controls visibility (see Build Visibility Controls below).
 - `description`: Required. Used in feed summaries and on the blog homepage.
@@ -46,6 +50,8 @@ Example structure:
 
 ```markdown
 ---
+layout: default
+author: Wordy
 title: Why we chose Dukascopy for market data
 date: 2026-04-30
 description: Technical decision on data provider selection for tradedesk.
@@ -63,7 +69,7 @@ We evaluated three providers...
 
 ## Publishing Rules
 
-- Published posts belong in `posts/` and must include a valid front matter `date`.
+- Published posts belong in `_posts/` and must include a valid front matter `date`.
 - Do not use a future `date` as a draft mechanism.
 - For unpublished work, use `_drafts/` with undated filenames (for example `my-post.md`).
 - Alternative holdback: set `published: false` in front matter until ready.
