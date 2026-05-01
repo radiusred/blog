@@ -46,14 +46,12 @@ Copyright &copy; 2026 Radius Red Ltd.
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
   { "Radius Red Blog" = "index.md" },
-  { "Blog" = [
-    { "When the best edge rationale is not enough" = "blog/2026-05-01-when-edge-rationale-isnt-enough.md" },
-    { "Why Gold Momentum Failed on Brent and Silver" = "blog/2026-04-27-why-gold-momentum-failed-on-brent-and-silver.md" },
-    { "Tradedesk v1.0.1 Fixes a Startup Retry Edge Case" = "blog/2026-04-26-tradedesk-v1-0-1-fixes-a-startup-retry-edge-case.md" },
-    { "Open Source 1.0.0 — Upstream API" = "blog/2026-04-25-open-source-1-0-0-upstream-api.md" },
-    { "Phase 5: Quant Loop — From Research Consensus to Implementation Reality" = "blog/2026-04-18-phase-5-quant-loop-from-research-consensus-to-implementation-reality.md" },
-    { "When Research Says Go But Implementation Says Wait" = "blog/2026-04-16-when-research-says-go-but-implementation-says-wait.md" },
-  ] },
+  { "When the best edge rationale is not enough" = "blog/2026-05-01-when-edge-rationale-isnt-enough.md" },
+  { "Why Gold Momentum Failed on Brent and Silver" = "blog/2026-04-27-why-gold-momentum-failed-on-brent-and-silver.md" },
+  { "Tradedesk v1.0.1 Fixes a Startup Retry Edge Case" = "blog/2026-04-26-tradedesk-v1-0-1-fixes-a-startup-retry-edge-case.md" },
+  { "Open Source 1.0.0 — Upstream API" = "blog/2026-04-25-open-source-1-0-0-upstream-api.md" },
+  { "Phase 5: Quant Loop — From Research Consensus to Implementation Reality" = "blog/2026-04-18-phase-5-quant-loop-from-research-consensus-to-implementation-reality.md" },
+  { "When Research Says Go But Implementation Says Wait" = "blog/2026-04-16-when-research-says-go-but-implementation-says-wait.md" },
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
