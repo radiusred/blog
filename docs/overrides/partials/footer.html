@@ -1,0 +1,66 @@
+<!--
+  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+  DEALINGS IN THE SOFTWARE.
+-->
+
+<footer class="md-footer">
+  <div class="md-footer__inner md-grid">
+    <div class="md-footer__left">
+      <div class="md-footer__copyright">
+        {% if config.extra.social %}
+          <div class="md-footer__social">
+            {% for social in config.extra.social %}
+              <a
+                href="{{ social.link }}"
+                title="{{ social.name }}"
+                class="md-social__link"
+                target="_blank"
+                rel="noopener"
+              >
+                {% include ".icons/" + social.icon + ".svg" %}
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if config.copyright %}
+          <div class="md-footer__copyright-text">
+            {{ config.copyright }}
+          </div>
+        {% endif %}
+        <div class="md-footer__registration">
+          Radius Red Ltd is registered in England &amp; Wales at: 71-75 Shelton Street, London. WC2H 9JQ
+        </div>
+      </div>
+    </div>
+    {% if page.edit_url %}
+      <div class="md-footer__right">
+        <div class="md-footer__actions">
+          <a
+            href="{{ page.edit_url }}"
+            title="{{ lang.t('content.action.edit') }}"
+            class="md-icon md-icon--link md-footer__link"
+          >
+            {% include ".icons/material/pencil.svg" %}
+          </a>
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</footer>
