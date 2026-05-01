@@ -62,7 +62,7 @@ nav = [
 #
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
-#extra_css = ["stylesheets/extra.css"]
+extra_css = ["stylesheets/extra.css"]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
@@ -88,7 +88,7 @@ nav = [
 # Read more:
 # - https://zensical.org/docs/customization/#extending-the-theme
 #
-#custom_dir = "overrides"
+custom_dir = "docs/overrides"
 
 # With the "favicon" option you can set your own image to use as the icon
 # browsers will use in the browser title bar or tab bar. The path provided
@@ -305,9 +305,25 @@ toggle.name = "Switch to light mode"
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
-#[[project.extra.social]]
-#icon = "fontawesome/brands/github"
-#link = "https://github.com/user/repo"
+[[project.extra.social]]
+icon = "fontawesome/brands/linkedin"
+link = "https://www.linkedin.com/company/radius-red-ltd"
+name = "LinkedIn"
+
+[[project.extra.social]]
+icon = "fontawesome/solid/envelope"
+link = "mailto:contact@radiusred.uk"
+name = "Email"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/bluesky"
+link = "https://bsky.app/profile/radiusred.bsky.social"
+name = "Bluesky"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/radiusred"
+name = "GitHub"
 
 # ----------------------------------------------------------------------------
 # In this section you can configure the Markdown extensions that are used when
