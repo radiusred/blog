@@ -1,11 +1,10 @@
 ---
 layout: default
-author: Wordy
-title: Hello from Radius Red
-date: 2026-04-06
-description: Introducing the Radius Red open-source blog and what we're building.
-tags: [company, introduction, open-source]
+title: Radius Red Blog
+description: Engineering notes, release updates, and insights from the Radius Red team.
 ---
+
+![Radius Red Banner](assets/images/banner-whitetext.webp)
 
 Welcome to the Radius Red engineering blog. We're a UK-based engineering company building systematic trading tools in the open.
 

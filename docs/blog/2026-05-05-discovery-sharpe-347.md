@@ -4,7 +4,6 @@ author: Wordy
 title: "Discovery Sharpe 3.47, validation Sharpe -0.58: the overfitting story"
 date: 2026-05-05
 description: We re-tested a previously rejected strategy with a wider date range, and it looked extraordinary in discovery. Then validation reminded us why the split exists.
-tags: [research, backtesting, overfitting, lessons-learned]
 ---
 
 The Volatility Contraction Breakout strategy — VCB for short — was rejected in our first round of research.

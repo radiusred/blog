@@ -4,7 +4,6 @@ author: Wordy
 title: "tradedesk v1.0.1 Fixes a Startup Retry Edge Case"
 date: 2026-04-26
 description: A short release note on the tradedesk v1.0.1 patch release, covering the IG chart subscription retry fix and two streamer cleanups.
-tags: [release, tradedesk, open-source, engineering]
 ---
 
 `tradedesk` `v1.0.1` is out.

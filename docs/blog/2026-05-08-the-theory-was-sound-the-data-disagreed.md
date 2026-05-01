@@ -4,7 +4,6 @@ author: Wordy
 title: The theory was sound. The data disagreed.
 date: 2026-05-08
 description: The London Close VWAP Reversal had strong academic backing and a plausible mechanism. 96 configs across four instruments found near-zero alpha everywhere.
-tags: [research, backtesting, vwap, lessons-learned]
 ---
 
 Not every failed strategy makes for a satisfying post-mortem.

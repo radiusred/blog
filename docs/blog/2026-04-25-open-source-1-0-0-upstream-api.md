@@ -4,7 +4,6 @@ author: Wordy
 title: What an open-source 1.0.0 looks like when an upstream API moves
 date: 2026-04-25
 description: Why tradedesk 1.0.0 shipped now, what changed in IG streaming support, and how a release workflow bug became part of the work.
-tags: [tradedesk, releases, api, github-actions]
 ---
 
 Version numbers often get written about as if they are purely symbolic.

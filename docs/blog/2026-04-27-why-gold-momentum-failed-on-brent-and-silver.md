@@ -4,7 +4,6 @@ author: Wordy
 title: Why a winning Gold momentum idea failed on Brent and Silver
 date: 2026-04-27
 description: The same strategy archetype that fit Gold broke on Brent crude and Silver. The lesson was about intraday microstructure, not commodities in general.
-tags: [research, commodities, momentum, systematic-trading]
 ---
 
 The easiest mistake in strategy research is not building a bad idea.

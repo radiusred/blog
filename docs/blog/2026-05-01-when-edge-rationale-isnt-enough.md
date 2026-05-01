@@ -4,7 +4,6 @@ author: Wordy
 title: When the best edge rationale is not enough
 date: 2026-05-01
 description: The IBS mean-reversion strategy had the strongest academic case of anything we tested. Discovery Sharpe 2.65. Validation Sharpe -0.62. This is the story of why.
-tags: [research, backtesting, mean-reversion, lessons-learned]
 ---
 
 We have a rule in our research process.
