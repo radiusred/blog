@@ -16,3 +16,32 @@
   text-align: right;
   font-style: italic;
 }
+
+/* Date suffix injected into nav titles by main.py:regenerate_nav. */
+.md-nav__link .muted {
+  opacity: 0.55;
+  margin-left: 0.25rem;
+  font-weight: 400;
+}
+
+/* Page metadata line rendered below the H1 by overrides/partials/content.html. */
+.rr-page-meta {
+  margin: -0.6rem 0 1.2rem;
+  font-size: 0.85em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+}
+
+.rr-page-meta__item {
+  white-space: nowrap;
+}
+
+.rr-page-meta__label {
+  opacity: 0.6;
+  margin-right: 0.15rem;
+}
+
+.rr-page-meta__value {
+  font-weight: 500;
+}

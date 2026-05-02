@@ -79,14 +79,15 @@ def _published_posts():
 
 
 def regenerate_nav():
-    """Rewrite the nav block in zensical.toml: top NAV_LIMIT posts plus an archive link."""
+    """Rewrite the nav block in zensical.toml: top NAV_LIMIT posts (oldest-first) plus an archive link."""
     posts = _published_posts()
-    visible = posts[:NAV_LIMIT]
+    visible = list(reversed(posts[:NAV_LIMIT]))
 
     new_block = ['nav = [', '  { "Radius Red Blog" = "index.md" },']
-    for _, title, fname in visible:
+    for d, title, fname in visible:
         safe_title = title.replace('"', '\\"')
-        new_block.append(f'  {{ "{safe_title}" = "posts/{fname}" }},')
+        label = f'{safe_title} <small class=\\"muted\\">({d.isoformat()})</small>'
+        new_block.append(f'  {{ "{label}" = "posts/{fname}" }},')
     new_block.append('  { "All posts..." = "archive.md" },')
     new_block.append("]")
 
