@@ -1,3 +1,10 @@
+/* banner image handling for light/dark mode */
+
+[data-md-color-scheme="default"] .banner-light { display: block; }
+[data-md-color-scheme="default"] .banner-dark  { display: none; }
+[data-md-color-scheme="slate"]   .banner-light { display: none; }
+[data-md-color-scheme="slate"]   .banner-dark  { display: block; }
+
 /* Footer customization for Radius Red */
 
 .md-footer__inner {
