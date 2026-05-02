@@ -5,58 +5,7 @@
 [data-md-color-scheme="slate"]   .banner-light { display: none; }
 [data-md-color-scheme="slate"]   .banner-dark  { display: block; }
 
-/* Footer customization for Radius Red */
-
-.md-footer__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
-.md-footer__left {
-  flex: 1;
-}
-
-.md-footer__copyright {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.md-footer__social {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.md-social__link {
-  display: inline-flex;
-  padding: 0.5rem;
-  color: currentColor;
-  transition: color 0.25s;
-}
-
-.md-social__link:hover {
-  color: var(--md-primary-fg-color);
-}
-
-.md-social__link svg {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.md-footer__copyright-text {
-  font-size: 0.75rem;
+.md-copyright__registration {
+  margin-top: 0.4rem;
   opacity: 0.7;
-}
-
-.md-footer__registration {
-  font-size: 0.75rem;
-  opacity: 0.7;
-  margin-top: 0.5rem;
-}
-
-.md-footer__right {
-  flex-shrink: 0;
 }
