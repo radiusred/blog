@@ -5,10 +5,17 @@
   <link href="https://radiusred.github.io/blog/atom.xml" rel="self" />
   <link href="https://radiusred.github.io/blog/" rel="alternate" />
   <id>https://radiusred.github.io/blog/</id>
-  <updated>2026-05-01T00:00:00Z</updated>
+  <updated>2026-05-02T00:00:00Z</updated>
   <author>
     <name>Radius Red Ltd.</name>
   </author>
+  <entry>
+    <title>Textbook Trend-Following on the Wrong Instrument — Why Donchian Channels Failed on Gold</title>
+    <link href="https://radiusred.github.io/blog/2026-05-02-donchian-gold-channels/" rel="alternate" />
+    <id>https://radiusred.github.io/blog/2026-05-02-donchian-gold-channels/</id>
+    <updated>2026-05-02T00:00:00Z</updated>
+    <summary>Gold is supposed to trend. Donchian channels are built for trends. So why did both channel variants fail to deliver alpha during the US session?</summary>
+  </entry>
   <entry>
     <title>When the best edge rationale is not enough</title>
     <link href="https://radiusred.github.io/blog/2026-05-01-when-edge-rationale-isnt-enough/" rel="alternate" />
