@@ -4,17 +4,8 @@ title: Radius Red Blog
 description: Engineering notes, release updates, and insights from the Radius Red team.
 ---
 
-<style>
-  .banner-light { display: none; }
-  .banner-dark { display: block; }
-  @media (prefers-color-scheme: light) {
-    .banner-light { display: block; }
-    .banner-dark { display: none; }
-  }
-</style>
-
-![Radius Red Banner - Light](assets/images/banner-darktext.webp){: class="banner-light" }
-![Radius Red Banner - Dark](assets/images/banner-whitetext.webp){: class="banner-dark" }
+![Radius Red Banner](assets/images/banner-darktext.webp){: class="banner-light" }
+![Radius Red Banner](assets/images/banner-whitetext.webp){: class="banner-dark" }
 
 Welcome to the Radius Red engineering blog. We're a UK-based engineering company building systematic trading tools in the open.
 
