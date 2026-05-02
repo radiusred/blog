@@ -9,3 +9,10 @@
   margin-top: 0.4rem;
   opacity: 0.7;
 }
+
+/* "All posts..." archive link in the nav: right-align and dim. */
+.md-nav__link[href$="archive/"] {
+  justify-content: flex-end;
+  text-align: right;
+  font-style: italic;
+}

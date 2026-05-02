@@ -3,6 +3,10 @@ on:
   push:
     branches:
       - main
+  schedule:
+    # Daily at 00:05 UTC — promotes any drafts whose date has arrived.
+    - cron: '5 0 * * *'
+  workflow_dispatch:
 permissions:
   contents: read
   pages: write
