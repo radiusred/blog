@@ -46,14 +46,14 @@ Copyright &copy; 2026 Radius Red Ltd.
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
   { "Radius Red Blog" = "index.md" },
-  { "Textbook Trend-Following on the Wrong Instrument — Why Donchian Channels Failed on Gold" = "posts/2026-05-02-donchian-gold-channels.md" },
-  { "When the best edge rationale is not enough" = "posts/2026-05-01-when-edge-rationale-isnt-enough.md" },
-  { "The First US-Session Gap — Spike-Fade and the Cost of Naive Breakouts" = "posts/2026-05-01-spike-fade-naive-breakouts.md" },
-  { "Why a winning Gold momentum idea failed on Brent and Silver" = "posts/2026-04-27-why-gold-momentum-failed-on-brent-and-silver.md" },
-  { "tradedesk v1.0.1 Fixes a Startup Retry Edge Case" = "posts/2026-04-26-tradedesk-v1-0-1-fixes-a-startup-retry-edge-case.md" },
-  { "What an open-source 1.0.0 looks like when an upstream API moves" = "posts/2026-04-25-open-source-1-0-0-upstream-api.md" },
-  { "Phase 5 Quant Loop: From Research Consensus to Implementation Reality" = "posts/2026-04-18-phase-5-quant-loop-from-research-consensus-to-implementation-reality.md" },
-  { "When Research Says Go but Implementation Says Wait" = "posts/2026-04-16-when-research-says-go-but-implementation-says-wait.md" },
+  { "When Research Says Go but Implementation Says Wait <small class=\"muted\">(2026-04-16)</small>" = "posts/2026-04-16-when-research-says-go-but-implementation-says-wait.md" },
+  { "Phase 5 Quant Loop: From Research Consensus to Implementation Reality <small class=\"muted\">(2026-04-18)</small>" = "posts/2026-04-18-phase-5-quant-loop-from-research-consensus-to-implementation-reality.md" },
+  { "What an open-source 1.0.0 looks like when an upstream API moves <small class=\"muted\">(2026-04-25)</small>" = "posts/2026-04-25-open-source-1-0-0-upstream-api.md" },
+  { "tradedesk v1.0.1 Fixes a Startup Retry Edge Case <small class=\"muted\">(2026-04-26)</small>" = "posts/2026-04-26-tradedesk-v1-0-1-fixes-a-startup-retry-edge-case.md" },
+  { "Why a winning Gold momentum idea failed on Brent and Silver <small class=\"muted\">(2026-04-27)</small>" = "posts/2026-04-27-why-gold-momentum-failed-on-brent-and-silver.md" },
+  { "The First US-Session Gap — Spike-Fade and the Cost of Naive Breakouts <small class=\"muted\">(2026-05-01)</small>" = "posts/2026-05-01-spike-fade-naive-breakouts.md" },
+  { "When the best edge rationale is not enough <small class=\"muted\">(2026-05-01)</small>" = "posts/2026-05-01-when-edge-rationale-isnt-enough.md" },
+  { "Textbook Trend-Following on the Wrong Instrument — Why Donchian Channels Failed on Gold <small class=\"muted\">(2026-05-02)</small>" = "posts/2026-05-02-donchian-gold-channels.md" },
   { "All posts..." = "archive.md" },
 ]
 
