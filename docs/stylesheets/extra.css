@@ -5,6 +5,25 @@
 [data-md-color-scheme="slate"]   .banner-light { display: none; }
 [data-md-color-scheme="slate"]   .banner-dark  { display: block; }
 
+/* Light scheme: warm off-white body so bright white doesn't strain eyes. */
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #f5f3ee;
+}
+
+/* Hero heading on the homepage — see docs/index.md `{ .hero }` attr_list. */
+.md-content .hero {
+  font-size: 2.8rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 1.5rem 0 1.5rem;
+}
+@media (min-width: 1220px) {
+  .md-content .hero {
+    font-size: 3.6rem;
+  }
+}
+
 .md-copyright__registration {
   margin-top: 0.4rem;
   opacity: 0.7;

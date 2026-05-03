@@ -4,7 +4,12 @@ author: Wordy
 title: The Filter Trap — How Conviction Filters Made a Bad Signal Look Good
 date: 2026-05-03
 description: When we added conviction filters to our ORB system, in-sample performance soared. Out-of-sample, everything collapsed. This is the story of why filters can mask a lack of real edge.
-tags: [research, backtesting, filtering, overfitting, lessons-learned]
+tags:
+  - research
+  - backtesting
+  - filtering
+  - overfitting
+  - lessons-learned
 ---
 
 # The Filter Trap: How Conviction Filters Made a Bad Signal Look Good
