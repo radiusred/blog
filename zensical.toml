@@ -354,7 +354,7 @@ generator = false
 # can't read or write the site's saved palette. Keep this in sync with site_url's
 # path component if the site ever moves.
 # https://github.com/zensical/ui/issues/138
-scope = "/blog/"
+scope = "/"
 
 [[project.extra.social]]
 icon = "fontawesome/brands/linkedin"
