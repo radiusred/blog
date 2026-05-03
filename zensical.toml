@@ -65,6 +65,9 @@ nav = [
   ] },
   { "Projects" = [
     { "Overview" = "projects/index.md" },
+    { "tradedesk" = "projects/tradedesk/index.md" },
+    { "tradedesk-dukascopy" = "projects/tradedesk-dukascopy/index.md" },
+    { "ha-sinkhole" = "projects/ha-sinkhole/index.md" },
   ] },
 ]
 

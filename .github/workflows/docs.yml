@@ -14,10 +14,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+      - uses: actions/checkout@v6
+        with:
+          repository: radiusred/tradedesk
+          path: _sources/tradedesk
+      - uses: actions/checkout@v6
+        with:
+          repository: radiusred/tradedesk-dukascopy
+          path: _sources/tradedesk-dukascopy
+      - uses: actions/checkout@v6
+        with:
+          repository: radiusred/ha-sinkhole
+          path: _sources/ha-sinkhole
       - uses: actions/setup-python@v6
         with:
           python-version: 3.x
       - run: pip install zensical
+      - run: python3 sync_docs.py
+        env:
+          SYNC_SOURCE_BASE: _sources
       - run: python3 main.py
       - run: zensical build --clean
       - name: Configure SSH
