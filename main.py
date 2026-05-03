@@ -1,5 +1,6 @@
 import re
 import shutil
+import tomllib
 from datetime import date, datetime
 from pathlib import Path
 
@@ -8,7 +9,19 @@ DRAFTS_BLOG = Path("_drafts")
 CONFIG = Path("zensical.toml")
 ARCHIVE_PAGE = Path("docs/blog/archive.md")
 ATOM_FEED = Path("docs/blog/atom.xml")
-SITE_URL = "https://radiusred.github.io/blog"
+
+
+def _load_site_url():
+    """Read site_url from zensical.toml so this script and the site stay in sync."""
+    with open(CONFIG, "rb") as f:
+        cfg = tomllib.load(f)
+    url = cfg.get("project", {}).get("site_url") or cfg.get("site_url")
+    if not url:
+        raise RuntimeError(f"site_url not found in {CONFIG}")
+    return url.rstrip("/")
+
+
+SITE_URL = _load_site_url()
 BLOG_PATH = "blog/posts"
 NAV_LIMIT = 10
 NAV_INDENT = "    "
