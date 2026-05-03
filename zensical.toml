@@ -348,6 +348,14 @@ toggle.name = "Switch to light mode"
 [project.extra]
 generator = false
 
+# Force a fixed __md_scope so the palette/announce/etc. localStorage keys are
+# consistent across all pages. Without this, the 404 page resolves its scope to
+# "/blog" (no trailing slash) while real pages resolve to "/blog/", so the 404
+# can't read or write the site's saved palette. Keep this in sync with site_url's
+# path component if the site ever moves.
+# https://github.com/zensical/ui/issues/138
+scope = "/blog/"
+
 [[project.extra.social]]
 icon = "fontawesome/brands/linkedin"
 link = "https://www.linkedin.com/company/radiusred"

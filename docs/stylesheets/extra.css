@@ -10,6 +10,28 @@
   --md-default-bg-color: #f5f3ee;
 }
 
+/* Brand link color. Compound selectors needed to beat Zensical's
+   [data-md-color-scheme=slate][data-md-color-primary=indigo] (0,2,0) specificity.
+   Slate uses a brighter red so it stays legible on the dark background. */
+[data-md-color-scheme="default"][data-md-color-primary="indigo"] {
+  --md-typeset-a-color: #611d1d;
+  --md-accent-fg-color: #611d1d;
+  --md-accent-fg-color--transparent: #611d1d1a;
+}
+
+[data-md-color-scheme="slate"][data-md-color-primary="indigo"] {
+  --md-typeset-a-color: #c91d19;
+  --md-accent-fg-color: #c91d19;
+  --md-accent-fg-color--transparent: #c91d191a;
+}
+
+/* navigation.sections renders second-level entries as always-open groups,
+   ignoring the toggle. Honor the aria-expanded Zensical already sets so that
+   non-active project menus collapse on the /projects pages. */
+.md-nav__item--section > nav.md-nav[aria-expanded="false"] > .md-nav__list {
+  display: none;
+}
+
 /* Hero heading on the homepage — see docs/index.md `{ .hero }` attr_list. */
 .md-content .hero {
   font-size: 2.8rem;
