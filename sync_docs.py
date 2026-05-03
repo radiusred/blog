@@ -32,6 +32,10 @@ PROJECTS = [
 
 DEST_BASE = Path("docs/projects")
 DEFAULT_SOURCE_BASE = Path("..")
+CONFIG = Path("zensical.toml")
+NAV_BEGIN = "# BEGIN_PROJECTS_NAV"
+NAV_END = "# END_PROJECTS_NAV"
+NAV_INDENT = "    "
 
 # Root-of-repo files that get promoted into the project landing dir.
 ROOT_FILE_MAP = {
@@ -134,6 +138,111 @@ def rewrite_links(content, source_repo_path, project):
     return content
 
 
+FRONTMATTER_RE = re.compile(r'^---\s*\n(.*?)\n---\s*\n', re.DOTALL)
+H1_RE = re.compile(r'^#\s+(.+?)\s*$', re.MULTILINE)
+HTML_COMMENT_RE = re.compile(r'<!--.*?-->', re.DOTALL)
+
+
+def humanize(stem):
+    return stem.replace("_", " ").replace("-", " ").strip().title()
+
+
+def extract_title(md_path, default):
+    """Read a markdown file and return its title from frontmatter, first H1,
+    or a humanized filename fallback."""
+    try:
+        content = md_path.read_text(encoding="utf-8")
+    except OSError:
+        return default
+
+    m = FRONTMATTER_RE.match(content)
+    if m:
+        for line in m.group(1).split("\n"):
+            if ":" in line:
+                key, _, value = line.partition(":")
+                if key.strip() == "title":
+                    return value.strip().strip('"\'')
+        content = content[m.end():]
+
+    h1 = H1_RE.search(content)
+    if h1:
+        title = HTML_COMMENT_RE.sub("", h1.group(1)).strip()
+        if title:
+            return title
+
+    return default
+
+
+def project_nav_entries(project, dest):
+    """Build [(label, target)] nav entries for a synced project's pages.
+
+    Order: index.md (Overview) first, then docs/ files alphabetically, then
+    contributing.md and security.md last."""
+    name = project["name"]
+    entries = []
+
+    if (dest / "index.md").exists():
+        entries.append(("Overview", f"projects/{name}/index.md"))
+
+    trailing = []
+    for special, label in (("contributing.md", "Contributing"), ("security.md", "Security")):
+        if (dest / special).exists():
+            trailing.append((label, f"projects/{name}/{special}"))
+
+    docs_pages = []
+    for path in sorted(dest.rglob("*.md")):
+        rel = path.relative_to(dest).as_posix()
+        if rel in {"index.md", "contributing.md", "security.md"}:
+            continue
+        title = extract_title(path, default=humanize(path.stem))
+        docs_pages.append((title, f"projects/{name}/{rel}"))
+
+    return entries + docs_pages + trailing
+
+
+def write_projects_nav(per_project_entries):
+    """Rewrite the BEGIN_PROJECTS_NAV/END_PROJECTS_NAV block in zensical.toml.
+
+    `per_project_entries` is a list of (project, entries) tuples in the order
+    they should appear under the Projects tab."""
+    inner = NAV_INDENT + "  "
+    lines = [f"{NAV_INDENT}{NAV_BEGIN}"]
+    for project, entries in per_project_entries:
+        if not entries:
+            continue
+        name = project["name"].replace('"', '\\"')
+        if len(entries) == 1:
+            label, target = entries[0]
+            lines.append(f'{NAV_INDENT}{{ "{name}" = "{target}" }},')
+            continue
+        lines.append(f'{NAV_INDENT}{{ "{name}" = [')
+        for label, target in entries:
+            safe = label.replace('"', '\\"')
+            lines.append(f'{inner}{{ "{safe}" = "{target}" }},')
+        lines.append(f"{NAV_INDENT}] }},")
+    lines.append(f"{NAV_INDENT}{NAV_END}")
+
+    text = CONFIG.read_text(encoding="utf-8")
+    src_lines = text.split("\n")
+    start = end = None
+    for i, line in enumerate(src_lines):
+        stripped = line.strip()
+        if start is None and stripped == NAV_BEGIN:
+            start = i
+        elif start is not None and stripped == NAV_END:
+            end = i
+            break
+    if start is None or end is None:
+        raise RuntimeError(
+            f"Could not find {NAV_BEGIN}/{NAV_END} markers in {CONFIG}"
+        )
+    src_lines[start : end + 1] = lines
+    new_text = "\n".join(src_lines)
+    if new_text != text:
+        CONFIG.write_text(new_text, encoding="utf-8")
+        print(f"Updated projects nav with {sum(1 for _, e in per_project_entries if e)} projects")
+
+
 def sync_project(project):
     src = source_for(project)
     dest = DEST_BASE / project["name"]
@@ -204,8 +313,14 @@ def sync_project(project):
 def main():
     print(f"Syncing project docs into {DEST_BASE}/")
     DEST_BASE.mkdir(parents=True, exist_ok=True)
+    per_project = []
     for project in PROJECTS:
-        sync_project(project)
+        synced = sync_project(project)
+        if synced:
+            per_project.append((project, project_nav_entries(project, DEST_BASE / project["name"])))
+        else:
+            per_project.append((project, []))
+    write_projects_nav(per_project)
 
 
 if __name__ == "__main__":
