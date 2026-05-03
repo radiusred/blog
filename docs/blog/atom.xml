@@ -2,66 +2,73 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Radius Red Blog</title>
   <subtitle>Engineering notes, release updates, and insights from the Radius Red team.</subtitle>
-  <link href="https://radiusred.github.io/blog/atom.xml" rel="self" />
-  <link href="https://radiusred.github.io/blog/" rel="alternate" />
-  <id>https://radiusred.github.io/blog/</id>
-  <updated>2026-05-02T00:00:00Z</updated>
+  <link href="https://radiusred.github.io/blog/blog/atom.xml" rel="self" />
+  <link href="https://radiusred.github.io/blog/blog/" rel="alternate" />
+  <id>https://radiusred.github.io/blog/blog/</id>
+  <updated>2026-05-03T00:00:00Z</updated>
   <author>
     <name>Radius Red Ltd.</name>
   </author>
   <entry>
+    <title>The Filter Trap — How Conviction Filters Made a Bad Signal Look Good</title>
+    <link href="https://radiusred.github.io/blog/blog/posts/2026-05-03-filter-trap-orb/" rel="alternate" />
+    <id>https://radiusred.github.io/blog/blog/posts/2026-05-03-filter-trap-orb/</id>
+    <updated>2026-05-03T00:00:00Z</updated>
+    <summary>When we added conviction filters to our ORB system, in-sample performance soared. Out-of-sample, everything collapsed. This is the story of why filters can mask a lack of real edge.</summary>
+  </entry>
+  <entry>
     <title>Textbook Trend-Following on the Wrong Instrument — Why Donchian Channels Failed on Gold</title>
-    <link href="https://radiusred.github.io/blog/2026-05-02-donchian-gold-channels/" rel="alternate" />
-    <id>https://radiusred.github.io/blog/2026-05-02-donchian-gold-channels/</id>
+    <link href="https://radiusred.github.io/blog/blog/posts/2026-05-02-donchian-gold-channels/" rel="alternate" />
+    <id>https://radiusred.github.io/blog/blog/posts/2026-05-02-donchian-gold-channels/</id>
     <updated>2026-05-02T00:00:00Z</updated>
     <summary>Gold is supposed to trend. Donchian channels are built for trends. So why did both channel variants fail to deliver alpha during the US session?</summary>
   </entry>
   <entry>
     <title>When the best edge rationale is not enough</title>
-    <link href="https://radiusred.github.io/blog/2026-05-01-when-edge-rationale-isnt-enough/" rel="alternate" />
-    <id>https://radiusred.github.io/blog/2026-05-01-when-edge-rationale-isnt-enough/</id>
+    <link href="https://radiusred.github.io/blog/blog/posts/2026-05-01-when-edge-rationale-isnt-enough/" rel="alternate" />
+    <id>https://radiusred.github.io/blog/blog/posts/2026-05-01-when-edge-rationale-isnt-enough/</id>
     <updated>2026-05-01T00:00:00Z</updated>
     <summary>The IBS mean-reversion strategy had the strongest academic case of anything we tested. Discovery Sharpe 2.65. Validation Sharpe -0.62. This is the story of why.</summary>
   </entry>
   <entry>
     <title>The First US-Session Gap — Spike-Fade and the Cost of Naive Breakouts</title>
-    <link href="https://radiusred.github.io/blog/2026-05-01-spike-fade-naive-breakouts/" rel="alternate" />
-    <id>https://radiusred.github.io/blog/2026-05-01-spike-fade-naive-breakouts/</id>
+    <link href="https://radiusred.github.io/blog/blog/posts/2026-05-01-spike-fade-naive-breakouts/" rel="alternate" />
+    <id>https://radiusred.github.io/blog/blog/posts/2026-05-01-spike-fade-naive-breakouts/</id>
     <updated>2026-05-01T00:00:00Z</updated>
     <summary>Our mean-reversion portfolio was silent during the US session. We tested breakout strategies to fill the gap. The spike-fade pattern taught us why it failed.</summary>
   </entry>
   <entry>
     <title>Why a winning Gold momentum idea failed on Brent and Silver</title>
-    <link href="https://radiusred.github.io/blog/2026-04-27-why-gold-momentum-failed-on-brent-and-silver/" rel="alternate" />
-    <id>https://radiusred.github.io/blog/2026-04-27-why-gold-momentum-failed-on-brent-and-silver/</id>
+    <link href="https://radiusred.github.io/blog/blog/posts/2026-04-27-why-gold-momentum-failed-on-brent-and-silver/" rel="alternate" />
+    <id>https://radiusred.github.io/blog/blog/posts/2026-04-27-why-gold-momentum-failed-on-brent-and-silver/</id>
     <updated>2026-04-27T00:00:00Z</updated>
     <summary>The same strategy archetype that fit Gold broke on Brent crude and Silver. The lesson was about intraday microstructure, not commodities in general.</summary>
   </entry>
   <entry>
     <title>tradedesk v1.0.1 Fixes a Startup Retry Edge Case</title>
-    <link href="https://radiusred.github.io/blog/2026-04-26-tradedesk-v1-0-1-fixes-a-startup-retry-edge-case/" rel="alternate" />
-    <id>https://radiusred.github.io/blog/2026-04-26-tradedesk-v1-0-1-fixes-a-startup-retry-edge-case/</id>
+    <link href="https://radiusred.github.io/blog/blog/posts/2026-04-26-tradedesk-v1-0-1-fixes-a-startup-retry-edge-case/" rel="alternate" />
+    <id>https://radiusred.github.io/blog/blog/posts/2026-04-26-tradedesk-v1-0-1-fixes-a-startup-retry-edge-case/</id>
     <updated>2026-04-26T00:00:00Z</updated>
     <summary>A short release note on the tradedesk v1.0.1 patch release, covering the IG chart subscription retry fix and two streamer cleanups.</summary>
   </entry>
   <entry>
     <title>What an open-source 1.0.0 looks like when an upstream API moves</title>
-    <link href="https://radiusred.github.io/blog/2026-04-25-open-source-1-0-0-upstream-api/" rel="alternate" />
-    <id>https://radiusred.github.io/blog/2026-04-25-open-source-1-0-0-upstream-api/</id>
+    <link href="https://radiusred.github.io/blog/blog/posts/2026-04-25-open-source-1-0-0-upstream-api/" rel="alternate" />
+    <id>https://radiusred.github.io/blog/blog/posts/2026-04-25-open-source-1-0-0-upstream-api/</id>
     <updated>2026-04-25T00:00:00Z</updated>
     <summary>Why tradedesk 1.0.0 shipped now, what changed in IG streaming support, and how a release workflow bug became part of the work.</summary>
   </entry>
   <entry>
     <title>Phase 5 Quant Loop: From Research Consensus to Implementation Reality</title>
-    <link href="https://radiusred.github.io/blog/2026-04-18-phase-5-quant-loop-from-research-consensus-to-implementation-reality/" rel="alternate" />
-    <id>https://radiusred.github.io/blog/2026-04-18-phase-5-quant-loop-from-research-consensus-to-implementation-reality/</id>
+    <link href="https://radiusred.github.io/blog/blog/posts/2026-04-18-phase-5-quant-loop-from-research-consensus-to-implementation-reality/" rel="alternate" />
+    <id>https://radiusred.github.io/blog/blog/posts/2026-04-18-phase-5-quant-loop-from-research-consensus-to-implementation-reality/</id>
     <updated>2026-04-18T00:00:00Z</updated>
     <summary>An inside look at the checks between a promising backtest and something that is actually safe enough to earn a DEMO slot.</summary>
   </entry>
   <entry>
     <title>When Research Says Go but Implementation Says Wait</title>
-    <link href="https://radiusred.github.io/blog/2026-04-16-when-research-says-go-but-implementation-says-wait/" rel="alternate" />
-    <id>https://radiusred.github.io/blog/2026-04-16-when-research-says-go-but-implementation-says-wait/</id>
+    <link href="https://radiusred.github.io/blog/blog/posts/2026-04-16-when-research-says-go-but-implementation-says-wait/" rel="alternate" />
+    <id>https://radiusred.github.io/blog/blog/posts/2026-04-16-when-research-says-go-but-implementation-says-wait/</id>
     <updated>2026-04-16T00:00:00Z</updated>
     <summary>A process-focused look at how we handle promising research, implementation reality checks, and explicit decision gates.</summary>
   </entry>
