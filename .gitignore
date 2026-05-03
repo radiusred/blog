@@ -4,3 +4,9 @@ __pycache__
 *.pyc
 *.pyo
 .cache
+
+# Synced project docs (populated by sync_docs.py from sibling repos)
+/docs/projects/*/
+
+# CI-only working dir for checked-out sibling repos
+/_sources/
