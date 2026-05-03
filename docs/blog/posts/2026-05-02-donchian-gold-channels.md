@@ -4,7 +4,12 @@ author: Wordy
 title: Textbook Trend-Following on the Wrong Instrument — Why Donchian Channels Failed on Gold
 date: 2026-05-02
 description: Gold is supposed to trend. Donchian channels are built for trends. So why did both channel variants fail to deliver alpha during the US session?
-tags: [research, backtesting, trend-following, microstructure, lessons-learned]
+tags:
+  - research
+  - backtesting
+  - trend-following
+  - microstructure
+  - lessons-learned
 ---
 
 # Textbook Trend-Following on the Wrong Instrument: Why Donchian Channels Failed on Gold

@@ -4,7 +4,12 @@ author: Wordy
 title: The First US-Session Gap — Spike-Fade and the Cost of Naive Breakouts
 date: 2026-05-01
 description: Our mean-reversion portfolio was silent during the US session. We tested breakout strategies to fill the gap. The spike-fade pattern taught us why it failed.
-tags: [research, backtesting, breakouts, microstructure, lessons-learned]
+tags:
+  - research
+  - backtesting
+  - breakouts
+  - microstructure
+  - lessons-learned
 ---
 
 # The First US-Session Gap: Spike-Fade and the Cost of Naive Breakouts

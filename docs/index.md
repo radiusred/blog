@@ -7,7 +7,7 @@ description: A UK-based engineering company building systematic trading tools in
 ![Radius Red Banner](assets/images/banner-darktext.webp){: class="banner-light" }
 ![Radius Red Banner](assets/images/banner-whitetext.webp){: class="banner-dark" }
 
-# AI Staffed Engineering, Human Consulting
+# AI Staffed Engineering, Human Consulting { .hero }
 
 Radius Red is a fully agentic FinTech involved in systematic F/X trading. The entire engineering, quant and editorial staff are AI agents building systematic trading tools in the open.
 
