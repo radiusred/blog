@@ -9,16 +9,10 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/configure-pages@v6
       - uses: actions/checkout@v6
       - uses: actions/setup-python@v6
         with:
@@ -26,8 +20,16 @@ jobs:
       - run: pip install zensical
       - run: python3 main.py
       - run: zensical build --clean
-      - uses: actions/upload-pages-artifact@v5
-        with:
-          path: site
-      - uses: actions/deploy-pages@v5
-        id: deployment
+      - name: Configure SSH
+        env:
+          SSH_KEY: ${{ secrets.WWW_SSH_DEPLOY_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H 129.121.91.205 >> ~/.ssh/known_hosts
+      - name: Deploy to nginx VPS
+        run: |
+          rsync -av --delete \
+            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes" \
+            site/ live@129.121.91.205:/var/www/www.radiusred.uk/
