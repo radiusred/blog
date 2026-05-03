@@ -3,11 +3,17 @@ import shutil
 from datetime import date, datetime
 from pathlib import Path
 
-DOCS_BLOG = Path("docs/posts")
+DOCS_BLOG = Path("docs/blog/posts")
 DRAFTS_BLOG = Path("_drafts")
 CONFIG = Path("zensical.toml")
-ARCHIVE_PAGE = Path("docs/archive.md")
+ARCHIVE_PAGE = Path("docs/blog/archive.md")
+ATOM_FEED = Path("docs/blog/atom.xml")
+SITE_URL = "https://radiusred.github.io/blog"
+BLOG_PATH = "blog/posts"
 NAV_LIMIT = 10
+NAV_INDENT = "    "
+NAV_BEGIN = "# BEGIN_BLOG_POSTS"
+NAV_END = "# END_BLOG_POSTS"
 
 
 def parse_frontmatter(content):
@@ -41,7 +47,7 @@ def _post_date(post_file):
 
 
 def reconcile_drafts():
-    """Move future-dated posts out of docs/blog/, promote due drafts back in."""
+    """Move future-dated posts out of docs/blog/posts/, promote due drafts back in."""
     DRAFTS_BLOG.mkdir(parents=True, exist_ok=True)
     today = date.today()
 
@@ -79,39 +85,43 @@ def _published_posts():
 
 
 def regenerate_nav():
-    """Rewrite the nav block in zensical.toml: top NAV_LIMIT posts (oldest-first) plus an archive link."""
+    """Rewrite the blog-posts block in zensical.toml between sentinel markers."""
     posts = _published_posts()
     visible = list(reversed(posts[:NAV_LIMIT]))
 
-    new_block = ['nav = [', '  { "Radius Red Blog" = "index.md" },']
+    new_lines = [f"{NAV_INDENT}{NAV_BEGIN}"]
     for d, title, fname in visible:
         safe_title = title.replace('"', '\\"')
         label = f'{safe_title} <small class=\\"muted\\">({d.isoformat()})</small>'
-        new_block.append(f'  {{ "{label}" = "posts/{fname}" }},')
-    new_block.append('  { "All posts..." = "archive.md" },')
-    new_block.append("]")
+        new_lines.append(
+            f'{NAV_INDENT}{{ "{label}" = "blog/posts/{fname}" }},'
+        )
+    new_lines.append(f"{NAV_INDENT}{NAV_END}")
 
     text = CONFIG.read_text()
     lines = text.split("\n")
     start = end = None
     for i, line in enumerate(lines):
-        if start is None and line.lstrip().startswith("nav = ["):
+        stripped = line.strip()
+        if start is None and stripped == NAV_BEGIN:
             start = i
-        elif start is not None and line.strip() == "]":
+        elif start is not None and stripped == NAV_END:
             end = i
             break
     if start is None or end is None:
-        raise RuntimeError("Could not find nav = [...] block in zensical.toml")
+        raise RuntimeError(
+            f"Could not find {NAV_BEGIN}/{NAV_END} markers in zensical.toml"
+        )
 
-    lines[start : end + 1] = new_block
+    lines[start : end + 1] = new_lines
     new_text = "\n".join(lines)
     if new_text != text:
         CONFIG.write_text(new_text)
-        print(f"Updated nav with {len(visible)} visible posts + archive link")
+        print(f"Updated blog nav with {len(visible)} visible posts")
 
 
 def generate_archive():
-    """Write docs/archive.md grouping all published posts by year and month, newest first."""
+    """Write docs/blog/archive.md grouping all published posts by year and month, newest first."""
     posts = _published_posts()
     lines = [
         "---",
@@ -171,14 +181,16 @@ def generate_atom_feed():
 
     now = datetime.now().isoformat() + "Z"
     latest_date = posts[0]["date"] + "T00:00:00Z" if posts else now
+    feed_url = f"{SITE_URL}/{BLOG_PATH.rsplit('/', 1)[0]}/atom.xml"
+    blog_url = f"{SITE_URL}/{BLOG_PATH.rsplit('/', 1)[0]}/"
 
     feed = f"""<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Radius Red Blog</title>
   <subtitle>Engineering notes, release updates, and insights from the Radius Red team.</subtitle>
-  <link href="https://radiusred.github.io/blog/atom.xml" rel="self" />
-  <link href="https://radiusred.github.io/blog/" rel="alternate" />
-  <id>https://radiusred.github.io/blog/</id>
+  <link href="{feed_url}" rel="self" />
+  <link href="{blog_url}" rel="alternate" />
+  <id>{blog_url}</id>
   <updated>{latest_date}</updated>
   <author>
     <name>Radius Red Ltd.</name>
@@ -186,7 +198,7 @@ def generate_atom_feed():
 """
 
     for post in posts:
-        post_url = f"https://radiusred.github.io/blog/{post['slug']}/"
+        post_url = f"{SITE_URL}/{BLOG_PATH}/{post['slug']}/"
         entry_date = post["date"] + "T00:00:00Z"
         feed += f"""  <entry>
     <title>{post['title']}</title>
@@ -199,9 +211,7 @@ def generate_atom_feed():
 
     feed += "</feed>\n"
 
-    with open("docs/atom.xml", "w") as f:
-        f.write(feed)
-
+    ATOM_FEED.write_text(feed)
     print(f"Generated Atom feed with {len(posts)} posts")
 
 

@@ -9,6 +9,7 @@ description: A complete index of every Radius Red blog post.
 
 ### May
 
+- **2026-05-03** — [The Filter Trap — How Conviction Filters Made a Bad Signal Look Good](posts/2026-05-03-filter-trap-orb.md)
 - **2026-05-02** — [Textbook Trend-Following on the Wrong Instrument — Why Donchian Channels Failed on Gold](posts/2026-05-02-donchian-gold-channels.md)
 - **2026-05-01** — [When the best edge rationale is not enough](posts/2026-05-01-when-edge-rationale-isnt-enough.md)
 - **2026-05-01** — [The First US-Session Gap — Spike-Fade and the Cost of Naive Breakouts](posts/2026-05-01-spike-fade-naive-breakouts.md)
