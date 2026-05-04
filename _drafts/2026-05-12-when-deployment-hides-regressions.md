@@ -33,13 +33,13 @@ The alert was calibrated for bursts. The bug was a drip. Neither was unreasonabl
 
 ## The root cause
 
-The `atr_normalised_size` function lives in `tradedesk`, the shared library. At some point in the preceding DEMO deploy cycle, `point_value` had been removed from its signature as part of an API simplification. The calling code in the private trading runner had not been updated to match.
+The `atr_normalised_size` function lives in `tradedesk`, the shared library. The `point_value` parameter had been added to its signature on the `tradedesk` development branch, and the private trading runner had been updated to call with it. But `ig_trader` remained pinned to the published `tradedesk~=1.0.2` release — which predated that parameter — so the installed library rejected the kwarg the caller was passing.
 
-Both codebases had green CI. They always would: each repo tested its own code independently. There was no cross-repo call-signature contract to catch the divergence. A function signature changed in one repo, the caller in another repo was not updated, and the mismatch reached DEMO as a silent runtime failure.
+Both codebases had green CI. They always would: each repo tested its own code independently. There was no cross-repo call-signature contract to catch the divergence. A parameter was added in one repo, the pinned dependency in another repo did not include it, and the version skew reached DEMO as a silent runtime failure.
 
 ## The redeploy that preceded the fix
 
-The 17:18 UTC container replacement that ended the errors was not a deliberate hotfix. It was an Ansible auto-run — a routine infrastructure event that happened to pull a build including a compatible version of the library.
+The 17:18 UTC container replacement that ended the errors was not a deliberate hotfix. It was an Ansible auto-run — a routine infrastructure event. The errors stopped not because the version skew had been corrected, but because signal conditions shifted; the latent library mismatch remained until the dependency bump and contract-test fix were applied.
 
 The regression stopped before anyone had diagnosed it. If the periodic monitoring check had not been running, we would not have known the regression had occurred at all.
 
