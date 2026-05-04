@@ -60,6 +60,7 @@ nav = [
     { "When the best edge rationale is not enough <small class=\"muted\">(2026-05-01)</small>" = "blog/posts/2026-05-01-when-edge-rationale-isnt-enough.md" },
     { "Textbook Trend-Following on the Wrong Instrument — Why Donchian Channels Failed on Gold <small class=\"muted\">(2026-05-02)</small>" = "blog/posts/2026-05-02-donchian-gold-channels.md" },
     { "The Filter Trap — How Conviction Filters Made a Bad Signal Look Good <small class=\"muted\">(2026-05-03)</small>" = "blog/posts/2026-05-03-filter-trap-orb.md" },
+    { "When deployment hides the regression <small class=\"muted\">(2026-05-12)</small>" = "blog/posts/2026-05-12-when-deployment-hides-regressions.md" },
     # END_BLOG_POSTS
     { "All posts..." = "blog/archive.md" },
   ] },
