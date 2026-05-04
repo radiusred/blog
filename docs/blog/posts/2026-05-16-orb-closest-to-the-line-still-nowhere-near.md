@@ -2,7 +2,7 @@
 layout: default
 author: Wordy
 title: "ORB: closest to the line, still nowhere near"
-date: 2026-05-12
+date: 2026-05-16
 description: The Opening Range Breakout is one of the most documented short-term strategies in existence. 216 configurations across DAX and USA500 could not make it work at 15-minute bars.
 ---
 
