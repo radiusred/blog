@@ -86,3 +86,20 @@
 .rr-page-meta__value {
   font-weight: 500;
 }
+
+/* Icon-only links (e.g. project table on /projects/): drop link color and
+   bump the icon size, mirroring the footer's .md-social__link pattern.
+   Selectors are scoped under .md-typeset to beat Zensical's link color rule. */
+.md-typeset a.rr-icon-link {
+  color: var(--md-default-fg-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.md-typeset a.rr-icon-link:hover,
+.md-typeset a.rr-icon-link:focus {
+  color: var(--md-accent-fg-color);
+}
+.md-typeset a.rr-icon-link .twemoji {
+  --md-icon-size: 2.1em;
+}
