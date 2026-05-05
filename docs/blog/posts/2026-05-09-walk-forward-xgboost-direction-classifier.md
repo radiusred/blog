@@ -70,16 +70,16 @@ def walk_forward_evaluate(
     X: pd.DataFrame,
     y: pd.Series,
     splitter: WalkForwardSplitter,
-    model_factory: Callable[[], Any],
+    model_factory: Callable[[], FitPredictModel],
     *,
     forward_returns: pd.Series | None = None,
     threshold: float = 0.5,
-    periods_per_year: int = 252 * 24 * 60,
+    periods_per_year: int = DEFAULT_PERIODS_PER_YEAR,  # = 252
 ) -> pd.DataFrame:
     ...
 ```
 
-The function returns a tidy DataFrame with one row per fold: `fold`, `n_train`, `n_test`, `log_loss`, `accuracy`, `auc`, `hit_rate`, `sharpe`, `max_drawdown`, `trade_count`. The Sharpe here is annualised from per-bar forward returns; on 1-minute bars the annualisation constant is `252 * 24 * 60 = 362880`.
+The function returns a tidy DataFrame with one row per fold: `fold`, `n_train`, `n_test`, `log_loss`, `accuracy`, `auc`, `hit_rate`, `sharpe`, `max_drawdown`, `trade_count`. The Sharpe is annualised using `periods_per_year`, which defaults to `DEFAULT_PERIODS_PER_YEAR = 252` (daily periods). When working with 1-minute bars, pass `periods_per_year=MINUTES_PER_TRADING_YEAR` (exported from `tradedesk.ml.walk_forward_runner` as `252 * 24 * 60 = 362,880`) to annualise correctly at that resolution.
 
 ## Quickstart
 
@@ -199,6 +199,16 @@ The following is now in the public [tradedesk repository](https://github.com/rad
 | `tradedesk.strategy.ml_direction_strategy` | `MLDirectionStrategy` |
 
 The leakage canary test runs in CI and blocks merges. The quickstart example is in `docs/examples/phase6_walk_forward_eurusd.py`. The framework works with any `predict_proba`-compatible model, so XGBoost is a default, not a constraint.
+
+## Sources
+
+- **tradedesk repository** — [github.com/radiusred/tradedesk](https://github.com/radiusred/tradedesk)
+- **`cv.py`** — Walk-forward splitter and `walk_forward_evaluate`: [`tradedesk/ml/cv.py`](https://github.com/radiusred/tradedesk/blob/main/tradedesk/ml/cv.py)
+- **`features.py`** — `FeatureBuilder` and feature stack: [`tradedesk/ml/features.py`](https://github.com/radiusred/tradedesk/blob/main/tradedesk/ml/features.py)
+- **`labels.py`** — Forward-return and triple-barrier labels: [`tradedesk/ml/labels.py`](https://github.com/radiusred/tradedesk/blob/main/tradedesk/ml/labels.py)
+- **`walk_forward_runner.py`** — High-level runner config (`MINUTES_PER_TRADING_YEAR`): [`tradedesk/ml/walk_forward_runner.py`](https://github.com/radiusred/tradedesk/blob/main/tradedesk/ml/walk_forward_runner.py)
+- **Quickstart example** — End-to-end EURUSD pipeline: [`docs/examples/phase6_walk_forward_eurusd.py`](https://github.com/radiusred/tradedesk/blob/main/docs/examples/phase6_walk_forward_eurusd.py)
+- **López de Prado (2018)** — *Advances in Financial Machine Learning*, Chapter 7 — embargo/purge and triple-barrier label construction
 
 ---
 
