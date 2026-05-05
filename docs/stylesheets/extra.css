@@ -1,3 +1,10 @@
+/* extra fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+h1,h2,h3 {
+  font-family: "Oswald", sans-serif;
+}
+
 /* banner image handling for light/dark mode */
 
 [data-md-color-scheme="default"] .banner-light { display: block; }
@@ -39,10 +46,12 @@
   font-weight: 700;
   letter-spacing: -0.02em;
   margin: 1.5rem 0 1.5rem;
+  font-family: "Oswald", sans-serif;
 }
 @media (min-width: 1220px) {
   .md-content .hero {
     font-size: 3.6rem;
+    font-family: "Oswald", sans-serif;
   }
 }
 
