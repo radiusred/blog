@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{#-
+  Add an Atom feed auto-discovery link to every page so feed readers
+  can find https://www.radiusred.uk/blog/atom.xml regardless of which
+  page the user lands on.
+-#}
+{% block extrahead %}
+  <link rel="alternate" type="application/atom+xml" title="Radius Red Blog" href="{{ 'blog/atom.xml' | url }}">
+{% endblock %}
