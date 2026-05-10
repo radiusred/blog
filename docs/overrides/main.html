@@ -6,5 +6,6 @@
   page the user lands on.
 -#}
 {% block extrahead %}
+  {{ super() }}
   <link rel="alternate" type="application/atom+xml" title="Radius Red Blog" href="{{ 'blog/atom.xml' | url }}">
 {% endblock %}
