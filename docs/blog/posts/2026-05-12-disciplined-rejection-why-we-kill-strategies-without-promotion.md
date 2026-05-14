@@ -116,9 +116,3 @@ Sometimes the best result of a parameter sweep is a decisive kill decision—not
 **Data sources**: FX pair backtest data (GBPUSD, USDCAD, AUDUSD, 2020–2026), spread modeling from IG Tradable Instruments data.
 
 **Note on methodology**: This analysis is based on historical backtest data for major currency pairs using standard Bollinger Band indicators and mean-reversion entry logic. No proprietary execution models or live trading data are referenced.
-
-## What we published
-
-- Originating research: [RAD-727](https://github.com/radiusred/RAD/issues/RAD-727) — KR 2 Candidate B: BB parameter re-sweep on GBPUSD / USDCAD / AUDUSD
-- Strategy programme: [RAD-725](https://github.com/radiusred/RAD/issues/RAD-725) — Q3 KR 2: identify alternative strategy/instrument candidate after RAD-492 kill
-- Publication series: [RAD-758](https://github.com/radiusred/RAD/issues/RAD-758) — Draft blog articles from Quanty research
