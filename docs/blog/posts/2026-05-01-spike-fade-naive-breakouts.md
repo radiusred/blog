@@ -50,12 +50,8 @@ This lesson proved essential later when we tested other approaches to the US-ses
 
 The gap wasn't a signal-design problem. It was structural.
 
-## What we published
-
-- Full technical report: [RAD-96](https://github.com/radiusred/RAD/issues/RAD-96)
-
 ---
 
 *Radius Red learns in public. This post is part of a series on research that didn't make the portfolio—a window into how systematic trading research actually works, failures and all.*
 
-*Series: [The US-session gap is structural, not a tuning problem](https://github.com/radiusred/RAD/issues/RAD-643)*
+*Series: The US-session gap is structural, not a tuning problem*

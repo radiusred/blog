@@ -61,6 +61,7 @@ We evaluated three providers...
 
 - Create posts in `docs/blog/posts/` and must include a valid front matter `date`.
 - The site build will handle future dated posts and ensure they do not appear until the publish date.
+- Public-facing content in this repository must not reference internal systems, internal issue trackers, private repository paths, or non-public workflow tools. In practice, do not link to `RAD-*` issues, private repos, or internal orchestration platforms from site copy.
 
 ## Local Preview
 

@@ -105,8 +105,3 @@ This case study confirms a principle that often gets buried in theory: *tight-st
 **Data sources**: Equity index backtest data (2024–2025), intraday volatility analysis on USA500 and DAX indices.
 
 **Note on methodology**: This analysis is grounded in quantitative backtesting against public market data and common equity index parameters. No proprietary trading logic, live deployment, or undisclosed instruments are referenced.
-
-## What we published
-
-- Originating research: [RAD-492](https://github.com/radiusred/RAD/issues/RAD-492) — Re-test Intraday Momentum (Zarattini/Quantitativo spec) on USA500 & DAX
-- Publication series: [RAD-758](https://github.com/radiusred/RAD/issues/RAD-758) — Draft blog articles from Quanty research
