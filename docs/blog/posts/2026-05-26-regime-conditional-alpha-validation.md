@@ -200,9 +200,3 @@ The lesson for strategy developers: **expect your strategies to be regime-condit
 **Data sources**: 8-year equity index backtest data (USA500, 2018–2026), regime analysis including realized volatility and realized correlation, daily equity curves.
 
 **Note on methodology**: This analysis compares discovery-window backtests (2020–2026) against extended-window validation (2018–2026) for a Donchian channel breakout strategy. The extended window required resolving a data integrity issue in 2018–2019 pricing. All metrics are derived from standard technical indicators and historical price data; no proprietary models or live deployment details are disclosed.
-
-## What we published
-
-- Originating research: [RAD-736](https://github.com/radiusred/RAD/issues/RAD-736) — Donchian N=55 USA500: run 8yr (2018–2026) validation after RAD-728 cache fix
-- Discovery study: [RAD-726](https://github.com/radiusred/RAD/issues/RAD-726) — KR 2 Candidate A: multi-day Donchian breakout discovery on USA500 + USA100
-- Publication series: [RAD-758](https://github.com/radiusred/RAD/issues/RAD-758) — Draft blog articles from Quanty research
