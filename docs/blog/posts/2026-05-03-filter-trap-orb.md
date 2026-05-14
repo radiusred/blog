@@ -73,13 +73,8 @@ Ask three questions:
 
 The second lesson was harder to swallow: sometimes the answer to "can we fill this gap?" is "no, not with these tools at this resolution." That's not the end of research. It's just a boundary condition. We now spend less time on architectures that are fighting the market's microstructure, and more time on markets and timeframes where our archetypes actually fit.
 
-## What we published
-
-- Phase 5 research: [RAD-346](https://github.com/radiusred/RAD/issues/RAD-346)
-- Implementation: [RAD-348](https://github.com/radiusred/RAD/issues/RAD-348)
-
 ---
 
 *Radius Red learns in public. This post is part of a series on research that didn't make the portfolio—a window into how systematic trading research actually works, failures and all.*
 
-*Series: [The US-session gap is structural, not a tuning problem](https://github.com/radiusred/RAD/issues/RAD-643)*
+*Series: The US-session gap is structural, not a tuning problem*

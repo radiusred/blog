@@ -175,9 +175,3 @@ This teaches a core principle: **measure strategies against portfolio impact, no
 **Data sources**: Equity index backtest data (USA500, USA100, 2020–2026), correlation analysis with existing strategy pairs, spread modeling from IG Tradable Instruments.
 
 **Note on methodology**: This analysis is based on historical backtests of Donchian channel breakouts (a well-established indicator), standard equity index parameters, and realistic spread assumptions. No proprietary position sizing, live deployment details, or internal strategy names are disclosed.
-
-## What we published
-
-- Originating research: [RAD-726](https://github.com/radiusred/RAD/issues/RAD-726) — KR 2 Candidate A: multi-day Donchian breakout discovery on USA500 + USA100
-- Strategy programme: [RAD-725](https://github.com/radiusred/RAD/issues/RAD-725) — Q3 KR 2: identify alternative strategy/instrument candidate after RAD-492 kill
-- Publication series: [RAD-758](https://github.com/radiusred/RAD/issues/RAD-758) — Draft blog articles from Quanty research

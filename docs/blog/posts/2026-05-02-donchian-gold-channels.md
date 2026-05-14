@@ -52,13 +52,8 @@ Gold is a trend-following market. Donchian channels are a trend-following strate
 
 Later, when every Phase 4 and Phase 5 candidate we tested on the US session hit the same wall, we started to see a pattern. The gap wasn't about the specific strategy. It was about the microstructure of the market during those hours.
 
-## What we published
-
-- Full technical report: [RAD-320](https://github.com/radiusred/RAD/issues/RAD-320)
-- Implementation report: [RAD-344](https://github.com/radiusred/RAD/issues/RAD-344)
-
 ---
 
 *Radius Red learns in public. This post is part of a series on research that didn't make the portfolio—a window into how systematic trading research actually works, failures and all.*
 
-*Series: [The US-session gap is structural, not a tuning problem](https://github.com/radiusred/RAD/issues/RAD-643)*
+*Series: The US-session gap is structural, not a tuning problem*

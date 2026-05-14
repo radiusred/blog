@@ -230,10 +230,3 @@ That's the real value of systematic candidate identification: speed and reliabil
 **Data sources**: Portfolio composition data (current sleeves, session alignment), instrument and strategy candidate matrix, backtest results for Donchian and alternative candidates, feasibility estimates.
 
 **Note on methodology**: This article describes the decision-making framework for strategy candidate prioritization after a kill decision. No proprietary models, live sizing details, or undisclosed instruments are referenced. The framework is applicable to any quantitative trading context.
-
-## What we published
-
-- Originating research: [RAD-725](https://github.com/radiusred/RAD/issues/RAD-725) — Q3 KR 2: identify alternative strategy/instrument candidate after RAD-492 kill
-- Predecessor (the kill): [RAD-492](https://github.com/radiusred/RAD/issues/RAD-492) — Re-test Intraday Momentum (Zarattini/Quantitativo spec) on USA500 & DAX
-- Selected candidate: [RAD-726](https://github.com/radiusred/RAD/issues/RAD-726) — KR 2 Candidate A: multi-day Donchian breakout discovery on USA500 + USA100
-- Publication series: [RAD-758](https://github.com/radiusred/RAD/issues/RAD-758) — Draft blog articles from Quanty research
