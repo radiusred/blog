@@ -74,6 +74,7 @@ Key insight: **Out-of-sample (2023–2026) outperforms in-sample (2020–2022)**
 Here's where the strategy's true value emerges:
 
 **Exit breakdown (23 trades across 6.2 years):**
+
 | Exit Type | Count | Win % | Total P&L |
 |-----------|-------|-------|-----------|
 | Take-profit (target hit) | 8 (35%) | 100% | +£3,015 |
@@ -81,6 +82,7 @@ Here's where the strategy's true value emerges:
 | Stop loss | 6 (26%) | 0% | -£896 |
 
 **The arithmetic of holding periods:**
+
 - Average hold duration: 45 days
 - Spread cost per round trip on USA500: ~0.3–0.5 bps (~£0.03–0.05 per £10k notional)
 - Total spread cost across 23 round trips: ~£15
@@ -88,6 +90,7 @@ Here's where the strategy's true value emerges:
 - **Spread absorption: 0.6%** (industry-leading; most intraday strategies are 50–100%)
 
 Compare this to the failed intraday strategy:
+
 - Average hold duration: < 1 hour
 - Spread cost per round trip: same absolute cost, much higher frequency
 - Round trips: 25–30
@@ -98,16 +101,19 @@ The Donchian strategy's longer holding period inverts the spread/alpha equation.
 ## Correlation: The Second Advantage
 
 A portfolio needs strategies that move independently. The existing live portfolio was:
+
 - BB (Bollinger Band mean-reversion) on DAX
 - BB on EURUSD
 - BB on USDJPY
 
 All three are European-session focused; all three are mean-reversion based. The Donchian breakout on USA500/USA100 is:
+
 - US-session focused (near-zero overlap)
 - Trend-following (opposite of mean-reversion)
 - Different instrument class (equity indices vs currencies)
 
 **Correlation analysis (daily returns, 2020–2026):**
+
 | Frequency | vs BB-DAX | vs BB-EURUSD | vs BB-USDJPY | Average |
 |-----------|-----------|-------------|-------------|---------|
 | Daily | -0.001 | -0.002 | +0.000 | **-0.001** |
