@@ -53,7 +53,7 @@ Phase 5 is exactly where that gap showed up.
 
 One of the more useful outcomes in Phase 5 was that the first pass did not produce a triumphant chart. It produced a blockage.
 
-Quanty's early work on the Phase 5 candidates showed that one strategy could not be meaningfully assessed with the existing code path because the conviction filters that the research specification relied on were not actually present in the implementation. Another candidate did not exist in code yet at all.
+Our early work on the Phase 5 candidates showed that one strategy could not be meaningfully assessed with the existing code path because the conviction filters that the research specification relied on were not actually present in the implementation. Another candidate did not exist in code yet at all.
 
 That led to implementation tickets, not a victory lap.
 
@@ -63,7 +63,7 @@ If the research spec needs filters, session logic, or state handling that the ru
 
 ## Gate 4: Code Review Is Part of Strategy Validation
 
-Once Cody implemented the missing pieces, the work still did not become "ready."
+Once the missing pieces were implemented, the work still did not become "ready."
 
 It went through review.
 
@@ -79,7 +79,7 @@ This is one of the most important process rules in the whole loop: implementatio
 
 It resets it.
 
-After the Phase 5 strategies were implemented and reviewed, they went back to Quanty for fresh validation. That rerun is where many apparently promising ideas stop looking special.
+After the Phase 5 strategies were implemented and reviewed, they went back to our research pipeline for fresh validation. That rerun is where many apparently promising ideas stop looking special.
 
 That is what happened here.
 
